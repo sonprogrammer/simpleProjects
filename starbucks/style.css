@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+}
+.navbar{
+    box-sizing: border-box;
+    background-color: darkgreen;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+h2{
+    display: flex;
+    color: white;
+    justify-content: center;
+}
