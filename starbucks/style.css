@@ -3,11 +3,15 @@ body{
 }
 .navbar{
     box-sizing: border-box;
-    background-color: darkgreen;
+    background-color: rgb(244, 243, 235);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+}
+
+.navbar img{
+    width: 75px;
 }
 
 h2{
