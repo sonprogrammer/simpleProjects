@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <script
+      src="https://kit.fontawesome.com/ccfae47948.js"
+      crossorigin="anonymous"></script>
 
-    <title>Starbucks</title>
+    <title>스타벅스</title>
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Starbucks" />
     <meta property="og:title" content="Starbucks Coffee Korea" />
@@ -32,14 +35,44 @@
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
   </head>
   <body>
+    <!-- 헤더부분 -->
     <div class="navbar">
-      <img src="favicon.png" alt="logo" />
-      <div class="member">
-        <p>Sign in</p>
-        <p>My Starbucks</p>
-        <p>Customer Service & Ideas</p>
-        <p>Find a Store</p>
-        <i class="fa-solid fa-magnifying-glass"></i>
+      <div class="contents">
+        <a href="/" class="logo">
+          <img src="favicon.png" alt="logo" />
+        </a>
+
+      <div class="menu">
+        <ul class="member">
+          <li>
+            <a href="/signin">로그인</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">마이페이지</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">고객 서비스</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">지점 찾기</a>
+          </li>
+          <div class="search">
+            <input type="text" />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </ul>
+
+        <div class="info">
+          <p>커피</p>
+          <p>메뉴</p>
+          <p>지점</p>
+          <p>공헌</p>
+          <p>스타벅스 점수</p>
+          <p>단체주문</p>
+          <p>새로운 소식</p>
+        </div>
+
+      </div>
 
       </div>
     </div>
