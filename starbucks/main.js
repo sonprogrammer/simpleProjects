@@ -14,3 +14,7 @@ searchInput.addEventListener('blur', () =>{
     searchEl.classList.remove('focused')
     searchInput.setAttribute('placeholder', '');
 })
+
+const badgeEl = document.querySelector('header .badges')
+
+window
