@@ -17,4 +17,18 @@ searchInput.addEventListener('blur', () =>{
 
 const badgeEl = document.querySelector('header .badges')
 
-window
+window.addEventListener('scroll', _.throttle( ()=>{
+    if(window.scrollY > 500){ //현재 화면이 500px 보다 높으면 배지숨기기
+        // badgeEl.style.display = 'none';
+        // gsap.to(요소, 지속시간, 옵션)
+        gsap.to(badgeEl, .6, {
+            opacity: 0
+        });
+    }else{
+        // badgeEl.style.display = 'block';
+        gsap.to(badgeEl, .6, {
+            opacity: 1
+        });
+    }
+},300))
+//_.throttle(함수, 시간)
