@@ -44,6 +44,12 @@
       integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"></script>
+
+      <!-- SWIPER -->
+      <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
+      <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+      
+
     <script defer src="./main.js"></script>
   </head>
   <body>
@@ -383,7 +389,38 @@
       <div class="notice-line">
         <div class="bg-left"></div>
         <div class="bg-right"></div>
-        <div class="inner"></div>
+        <div class="inner">
+
+          <div class="inner__left">
+            <h2>공지사항</h2>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)">개인정보 처리방침 변경안내</a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)">스타벅스 고객센터의 대표번호 운영시간 변경 안내</a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)">시스템 개선 및 서비스 점검 안내</a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javascript:void(0)">스타벅스 카드 이용약관 개정 안내</a>
+                </div>
+              </div>
+            </div>
+            <a href="javascript:void(0)" class="notice-line__more">
+              <i class="fa-solid fa-circle-plus" style="color: #fff; font-size: 30px;"></i>
+            </a>
+          </div>
+
+          <div class="inner__right">
+            <h2>스타벅스 프로모션</h2>
+            <div class="toggle-promotion">
+              <i class="fa-solid fa-upload" style="color: #000; font-size: 30px;"></i>
+            </div>
+          </div>
+        </div>
       </div>
       
     </section>
