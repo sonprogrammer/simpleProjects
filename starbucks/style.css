@@ -441,6 +441,12 @@ header .badges .badge{
     height: 693px;
     background-color: #f6f5ef;
     position: relative;
+    transition: height .4s;
+    overflow: hidden;
+}
+
+.notice .promotion.hide{
+    height: 0;
 }
 
 
@@ -529,3 +535,4 @@ header .badges .badge{
     background-color: #333;
     color: white;
 } 
+
