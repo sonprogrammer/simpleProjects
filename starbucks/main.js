@@ -59,5 +59,14 @@ new Swiper('.promotion .swiper-container',{
     loop: true,
     autoplay: {
         delay: 3000
+    },
+    pagination: {
+        el: '.promotion .swiper-pagination', 
+        clickable: true, //클릭시 사용자가 제어 가능
+    },
+    navigation:{
+        prevEl: '.promotion .swiper-prev',
+        nextEl: '.promotion .swiper-next',
     }
 });
+
