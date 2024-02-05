@@ -79,6 +79,24 @@ a{
 }
 
 
+.back-to-position {
+    opacity: 0;
+    transition: 1s;
+}
+
+.back-to-position.to-right{
+    transform: translateX(-150px);
+}
+
+.back-to-position.to-left{
+    transform: translateX(150px);
+}
+
+.show .back-to-position{
+    opacity: 1;
+    transform: translateX(0);
+}
+
 /* 헤더부분 */
 
 header{
@@ -733,6 +751,7 @@ header .badges .badge{
 }
 
 .pick-your-favorite .text-group{
+    margin-left: 100px;
     width: 362px;
     display: flex;
     flex-wrap: wrap;
@@ -745,4 +764,114 @@ header .badges .badge{
 .pick-your-favorite .text-group .description{
     display: block;
     margin-bottom: 40px;
+}
+
+
+/** RESERVE STORE  */
+.reserve-store{
+    background-image: url('images/reserve_store_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.reserve-store .inner{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reserve-store .medal{
+    width: 334px;
+    height: 334px;
+    perspective: 600px;
+}
+
+.reserve-store .medal .front,
+.reserve-store .medal .back{
+    width: 334px;
+    height: 334px;
+    backface-visibility: hidden;
+    transition: 1s;
+    position: absolute;
+}
+
+.reserve-store .medal .front{
+    transform: rotateY(0deg);
+}
+
+.reserve-store .medal:hover .front{
+    transform: rotateY(180deg);
+}
+
+.reserve-store .medal .back{
+    transform: rotateY(-180deg);
+}
+
+.reserve-store .medal:hover .back{
+    transform: rotateY(0deg);
+}
+
+.reserve-store .medal .back .btn{
+    position: absolute;
+    top: 240px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+
+
+/** FIND THE STORE */
+.find-store{
+    background-image: url('images/find_store_bg.jpg');
+}
+
+.find-store .inner{
+    height: 400px;
+}
+
+.find-store .texture1{
+    position: absolute;
+    top: 0;
+    left: 400px;
+}
+
+.find-store .inner .texture2{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.find-store .inner .picture{
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.find-store .inner .picture1{
+    top: -60px;
+    left: 0;
+}
+
+.find-store .inner .picture2{
+    top: 150px;
+    left: 250px;
+}
+
+.find-store .text-group{
+    position: absolute;
+    top: 120px;
+    left: 550px;
+}
+
+.find-store .text-group .title{
+    margin-bottom: 20px;
+}
+
+.find-store .text-group .description{
+    margin-bottom: 20px;
 }

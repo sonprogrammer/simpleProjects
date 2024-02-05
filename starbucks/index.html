@@ -45,14 +45,21 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"></script>
 
-      <!-- SWIPER -->
-      <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
-      <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
-      
-    <!-- <script defer src="./youtube.js"></script>  -->
+    <!-- SWIPER -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+
+    <!-- scrollmagic -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+      integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script defer src="./youtube.js"></script>
     <!-- defer는 html이 다 준비되면 그때 실행하도록 하는 것을 의미 -->
     <script defer src="./main.js"></script>
-
   </head>
   <body>
     <!-- 헤더부분 -->
@@ -385,14 +392,11 @@
       </div>
     </section>
 
-
     <section class="notice">
-
       <div class="notice-line">
         <div class="bg-left"></div>
         <div class="bg-right"></div>
         <div class="inner">
-
           <div class="inner__left">
             <h2>공지사항</h2>
             <div class="swiper-container">
@@ -401,25 +405,35 @@
                   <a href="javascript:void(0)">개인정보 처리방침 변경안내</a>
                 </div>
                 <div class="swiper-slide">
-                  <a href="javascript:void(0)">스타벅스 고객센터의 대표번호 운영시간 변경 안내</a>
+                  <a href="javascript:void(0)"
+                    >스타벅스 고객센터의 대표번호 운영시간 변경 안내</a
+                  >
                 </div>
                 <div class="swiper-slide">
-                  <a href="javascript:void(0)">시스템 개선 및 서비스 점검 안내</a>
+                  <a href="javascript:void(0)"
+                    >시스템 개선 및 서비스 점검 안내</a
+                  >
                 </div>
                 <div class="swiper-slide">
-                  <a href="javascript:void(0)">스타벅스 카드 이용약관 개정 안내</a>
+                  <a href="javascript:void(0)"
+                    >스타벅스 카드 이용약관 개정 안내</a
+                  >
                 </div>
               </div>
             </div>
             <a href="javascript:void(0)" class="notice-line__more">
-              <i class="fa-solid fa-circle-plus" style="color: #fff; font-size: 30px;"></i>
+              <i
+                class="fa-solid fa-circle-plus"
+                style="color: #fff; font-size: 30px"></i>
             </a>
           </div>
 
           <div class="inner__right">
             <h2>스타벅스 프로모션</h2>
             <div class="toggle-promotion">
-              <i class="fa-solid fa-upload" style="color: #000; font-size: 30px;"></i>
+              <i
+                class="fa-solid fa-upload"
+                style="color: #000; font-size: 30px"></i>
             </div>
           </div>
         </div>
@@ -429,26 +443,25 @@
         <div class="swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="./images/promotion_slide1.jpg" alt="">
+              <img src="./images/promotion_slide1.jpg" alt="" />
               <a href="javascript:void(0)" class="btn">자세히 보기</a>
             </div>
             <div class="swiper-slide">
-              <img src="./images/promotion_slide2.jpg" alt="">
+              <img src="./images/promotion_slide2.jpg" alt="" />
               <a href="javascript:void(0)" class="btn">자세히 보기</a>
             </div>
             <div class="swiper-slide">
-              <img src="./images/promotion_slide3.jpg" alt="">
+              <img src="./images/promotion_slide3.jpg" alt="" />
               <a href="javascript:void(0)" class="btn">자세히 보기</a>
             </div>
             <div class="swiper-slide">
-              <img src="./images/promotion_slide4.jpg" alt="">
+              <img src="./images/promotion_slide4.jpg" alt="" />
               <a href="javascript:void(0)" class="btn">자세히 보기</a>
             </div>
             <div class="swiper-slide">
-              <img src="./images/promotion_slide5.jpg" alt="">
+              <img src="./images/promotion_slide5.jpg" alt="" />
               <a href="javascript:void(0)" class="btn">자세히 보기</a>
             </div>
-            
           </div>
         </div>
 
@@ -460,7 +473,6 @@
           <i class="fa-solid fa-arrow-right"></i>
         </div>
       </div>
-      
     </section>
 
     <!--* REWARD -->
@@ -468,83 +480,147 @@
       <div class="bg-left"></div>
       <div class="bg-right"></div>
       <div class="inner">
-        
         <div class="btn-group">
           <div class="btn btn--reverse sign-up">회원가입</div>
           <div class="btn sign-in">로그인</div>
           <div class="btn gift">선물하기</div>
         </div>
-        
       </div>
     </section>
-
 
     <!--* YOUTUBE VIDEO -->
     <section class="youtube">
       <div class="youtube__area">
-        <div id="player"></div> <!-- 유튜브가 출력되는 곳-->
+        <div id="player"></div>
+        <!-- 유튜브가 출력되는 곳-->
       </div>
       <div class="youtube__cover"></div>
 
       <div class="inner">
-        <img src="images/floating1.png" alt="icon1" class="floating floating1" />
-        <img src="images/floating2.png" alt="icon2" class="floating floating2" />
+        <img
+          src="images/floating1.png"
+          alt="icon1"
+          class="floating floating1" />
+        <img
+          src="images/floating2.png"
+          alt="icon2"
+          class="floating floating2" />
         <!-- <img src="images/floating3.png" alt="icon3" class="floating floating3" /> -->
       </div>
-
     </section>
 
-
     <!--* SEASON PRODUCT -->
-    <section class="season-product">
+    <section class="season-product scroll-spy">
       <div class="inner">
-        <img src="images/floating3.png" alt="icon3" class="floating floating3" />
-        <img src="images/season_product_image.png" alt="" class="product" />
-        
-        <div class="text-group">
-          <img src="images/season_product_text1.png" alt="" class="title" />
-          <img src="images/season_product_text2.png" alt="" class="description" />
+        <img
+          src="images/floating3.png"
+          alt="icon3"
+          class="floating floating3" />
+        <img
+          src="images/season_product_image.png"
+          alt=""
+          class="product back-to-position to-right" />
 
-          <div class="more">
+        <div class="text-group">
+          <img
+            src="images/season_product_text1.png"
+            alt=""
+            class="title back-to-position to-left" />
+          <img
+            src="images/season_product_text2.png"
+            alt=""
+            class="description back-to-position to-left" />
+
+          <div class="more back-to-position to-left">
             <a href="javascript:void(0)" class="btn">자세히 보기</a>
           </div>
         </div>
-
       </div>
     </section>
 
-
     <!--* RESERVE COFFEE  -->
-    <section class="reserve-coffee">
+    <section class="reserve-coffee scroll-spy">
       <div class="inner">
+        <img src="images/reserve_logo.png" alt="" class="reserve-logo
+        back-to-position to-right />
 
-        <img src="images/reserve_logo.png" alt="" class="reserve-logo" />
-      
         <div class="text-group">
-          <img src="images/reserve_text.png" alt="" class="description" />
-          <div class="more">
+          <img
+            src="images/reserve_text.png"
+            alt=""
+            class="description back-to-position to-right" />
+          <div class="more back-to-position to-right">
             <a href="javascript:void(0)" class="btn btn--gold">자세히 보기</a>
           </div>
         </div>
-        <img src="images/reserve_image.png" alt="" class="product" />
+        <img
+          src="images/reserve_image.png"
+          alt=""
+          class="product back-to-position to-left" />
       </div>
-
     </section>
 
-
     <!--* PICK YOUR FAVORITE  -->
-    <section class="pick-your-favorite">
+    <section class="pick-your-favorite scroll-spy">
       <div class="inner">
-
         <div class="text-group">
-          <img src="images/favorite_text1.png" alt="" class="title" />
-          <img src="images/favorite_text2.png" alt="" class="description" />
-          <div class="more">
+          <img
+            src="images/favorite_text1.png"
+            alt=""
+            class="title back-to-position to-right" />
+          <img
+            src="images/favorite_text2.png"
+            alt=""
+            class="description back-to-position to-right" />
+          <div class="more back-to-position to-right">
             <a href="javascript:void(0)" class="btn btn--white">자세히 보기</a>
           </div>
         </div>
       </div>
     </section>
 
+    <!--* RESERVE STORE  -->
+    <section class="reserve-store">
+      <div class="inner">
+        <div class="medal">
+          <div class="front">
+            <img src="images/reserve_store_medal_front.png" alt="" />
+          </div>
+          <div class="back">
+            <img src="images/reserve_store_medal_back.png" alt="" />
+            <a href="javascript:void(0)" class="btn">매장안내</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--* FIND THE STORE -->
+    <section class="find-store scroll-spy">
+      <div class="inner">
+        <img src="images/find_store_texture1.png" alt="" class="texture1" />
+        <img src="images/find_store_texture2.png" alt="" class="texture2" />
+        <img
+          src="images/find_store_picture1.jpg"
+          alt=""
+          class="picture picture1 back-to-position to-right" />
+        <img
+          src="images/find_store_picture2.jpg"
+          alt=""
+          class="picture picture2 back-to-position to-right" />
+        <div class="text-group">
+          <img
+            src="images/find_store_text1.png"
+            alt=""
+            class="title back-to-position to-left" />
+          <img
+            src="images/find_store_text2.png"
+            alt=""
+            class="description back-to-position to-left" />
+          <div class="more back-to-position to-left">
+            <a href="javascript:void(0)" class="btn">매장찾기</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
