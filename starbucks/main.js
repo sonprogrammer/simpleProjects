@@ -106,7 +106,7 @@ floatingObj('.floating3', 1.5, 20)
 
 
 
-const spyEls = document.querySelectorAll('.section.scroll-spy');
+const spyEls = document.querySelectorAll('section.scroll-spy');
 spyEls.forEach((spyEl) => {
     new ScrollMagic
         .Scene({
@@ -114,5 +114,5 @@ spyEls.forEach((spyEl) => {
             triggerHook: 0.8
         })
         .setClassToggle(spyEl, 'show')
-        .addTo(new ScrollMagic.Controller());
+        .addTo(new ScrollMagic.Controller())
 });
