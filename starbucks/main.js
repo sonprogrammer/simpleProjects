@@ -28,15 +28,31 @@ window.addEventListener(
         opacity: 0,
         display: 'none',
       })
+      gsap.to('#to-top', .2, {
+        x: 0
+      })
+
     } else {
       gsap.to(badgeEl, 0.6, {
         opacity: 1,
         display: 'block',
       })
+      gsap.to('#to-top', .2, {
+        x: 100,
+      })
     }
   }, 300)
 )
 //_.throttle(함수, 시간)
+
+
+const toTopEl = document.querySelector('#to-top');
+toTopEl.addEventListener('click', ()=>{
+  gsap.to(window, .7, {
+    scrollTo: 0
+  })
+})
+
 
 const fadeEls = document.querySelectorAll('.visual .fade-in')
 
