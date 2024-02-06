@@ -1,6 +1,6 @@
 ## 단순 프로젝트's(for 기본기 탄탄,)
 
-1. Starbucks page
+## 1. Starbucks page
  - 사용 기술
      1. html
      2. css
@@ -12,3 +12,6 @@
     4. scrollmagic
   - 폰트
     1. 눈누폰트(조선궁서체)
+  - 배포
+    1. netlify( address : https://monumental-baklava-6ea958.netlify.app/ )
+       
