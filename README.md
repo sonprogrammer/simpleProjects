@@ -1,7 +1,7 @@
 ## 단순 프로젝트's(for 기본기 탄탄,)
 
 ## 1. Starbucks page
- - 사용 기술
+ - 사용 언어
      1. html
      2. css
      3. javascript
