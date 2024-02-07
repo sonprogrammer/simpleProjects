@@ -78,8 +78,30 @@ header .basket{
     right: -6px;
 }
 
+header .basket .arrow{
+    width: 20px;
+    height: 10px;
+    position: absolute;
+    top: -10px;
+    right: 12px;
+    /* overflow: hidden; */
+}
+
+header .basket .arrow::before{
+    content: "";
+    width: 12px;
+    height: 12px;
+    border: 1px solid #d2d2d2;
+    background-color: #fff;
+    transform: rotate(45deg);
+    /* transform-origin: 0 0;
+    position: absolute;
+    top: 0;
+    left: 50%; */
+}
+
 header .basket .message{
-    
+
 }
 
 header .basket ul{
