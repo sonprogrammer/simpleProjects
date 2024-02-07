@@ -1,0 +1,95 @@
+body {
+    font-size: 16px;
+    line-height: 1;
+    font-family: "Roboto", "Noto Sans KR", sans-serif;
+    /* * Roboto가 적용이 안되면 Noto Sans KR폰트를 사용하게 됨 */
+    word-break: keep-all; /* 단어 단위로 줄바꿈이 적용됨(끊기지 않게)*/
+}
+
+
+
+/* *Header */
+
+header{
+    background-color: #3a3a3a;
+}
+
+header .inner{
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+header ul.menu{
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul.menu > li{
+    display: flex;
+    position: relative;
+}
+
+header ul.menu > li > a{
+    padding: 0 10px;
+    font-size: 11px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #f5f5f5;
+    opacity: .8;
+}
+
+header ul.menu > li.apple-logo > a,
+header ul.menu > li.search-starter > a,
+header ul.menu > li.basket-starter > a{
+    width: 14px;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-position: center 13px;
+}
+
+header ul.menu > li.apple-logo > a{
+    background-image: url("../images/header_apple.svg");
+}
+
+header ul.menu > li.search-starter > a{
+    background-image: url("../images/header_search.svg");
+}
+
+header ul.menu > li.basket-starter > a{
+    background-image: url("../images/header_bag.svg");
+}
+
+header ul.menu > li > a:hover{
+    opacity: 1;
+}
+
+/* *Header / Menu / Basket */
+header .basket{
+    width: 290px;
+    padding: 10px 20px;
+    border: 1px solid #d2d2d2;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: absolute;
+    top: calc(100% + 4px);
+    right: -6px;
+}
+
+header .basket .message{
+    
+}
+
+header .basket ul{
+
+}
+
+header .basket ul li{
+
+}
+
+header .basket ul li a{
+
+}
