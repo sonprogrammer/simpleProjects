@@ -40,6 +40,7 @@ header ul.menu{
 header ul.menu > li{
     display: flex;
     position: relative;
+    transition: .4s ;
 }
 
 header ul.menu > li > a{
@@ -154,7 +155,9 @@ header .search-wrap{
     top: 0;
     left: 0;
     width: 100%;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s;
 }
 
 header .search{
@@ -250,9 +253,12 @@ header .search .autocompletes ul li:hover a{
 }
 
 header.searching ul.menu > li {
-    display: none;
+    transform: scale(.7);
+    opacity: 0;
 }
 
 header.searching .search-wrap{
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: .2s;
 }
