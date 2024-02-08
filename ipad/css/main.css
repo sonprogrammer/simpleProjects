@@ -6,7 +6,9 @@ body {
     word-break: keep-all; /* 단어 단위로 줄바꿈이 적용됨(끊기지 않게)*/
 }
 
-
+a{
+    text-decoration: none;
+}
 
 /* *Header */
 
@@ -84,7 +86,7 @@ header .basket .arrow{
     position: absolute;
     top: -10px;
     right: 12px;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 header .basket .arrow::before{
@@ -94,24 +96,35 @@ header .basket .arrow::before{
     border: 1px solid #d2d2d2;
     background-color: #fff;
     transform: rotate(45deg);
-    /* transform-origin: 0 0;
+    transform-origin: 0 0;
     position: absolute;
     top: 0;
-    left: 50%; */
+    left: 50%; 
 }
 
 header .basket .message{
-
+    padding: 30px 0;
+    font-size: 13px;
+    color: #6e6e6e;
+    text-align: center;
 }
 
 header .basket ul{
+    margin-top: 10px;
 
 }
 
 header .basket ul li{
-
+    border-top: 1px solid #d2d2d2;
 }
 
 header .basket ul li a{
+    display: block;
+    padding:14px;
+    font-size: 13px;
+    color: #0071e3;
+}
 
+header .basket ul li a:hover{
+    text-decoration: underline;
 }
