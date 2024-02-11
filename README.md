@@ -18,4 +18,4 @@
 
 ---       
 
-## 2. apple ipad responsive web page
+## 2. apple Ipad responsive web page
