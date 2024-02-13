@@ -6,13 +6,16 @@
 1. html
 2. css
 3. javascript
+   
 ### 라이브러리 & api
 1. gsap
 2. swiper
 3. ifram(api)
 4. scrollmagic
+   
 ### 폰트
 1. 눈누폰트(조선궁서체)
+   
 ### 배포
 1. netlify( address : https://monumental-baklava-6ea958.netlify.app/ )
 
