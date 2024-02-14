@@ -22,3 +22,8 @@
 ---       
 
 ## 2. apple Ipad responsive web page
+
+### 사용 언어
+1. html
+2. css
+3. javascript
