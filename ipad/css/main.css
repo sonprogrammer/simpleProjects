@@ -19,6 +19,30 @@ a{
     color: #1d1d1d;
 }
 
+.btn{
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    padding: 0 10px;
+    display: flex;
+    border: none;
+    border-radius: 100px;
+    outline: none;
+    font-size: 11px;
+    line-height: 1;
+    color: #fff;
+    background-color: #0071e3;
+    cursor: pointer;
+}
+
+.btn:hover{
+    opacity: .7;
+}
+
+.btn:focus{
+    box-shadow: 0 0 0 4px #81b9f1; /*첫번째는 x 두번째는 y 세번째는 흐린값 네번째는 굵기*/
+}
+
 /* *Header */
 
 header{
@@ -281,3 +305,56 @@ header.searching .search .autocompletes li{
     transform: translate(0, 0);
     
 }
+
+
+ /* * Navigation */
+nav {
+    background-color: rgba(255, 255, 255, .7);
+    backdrop-filter: blur(20px); /* *투명도 조절*/
+    border-bottom: 1px solid #d2d2d2;
+    position: sticky; /** 네비게이션이 스크롤을 내려도상단에 걸리게 하려고 함 */
+    top: 0;
+    z-index: 99;
+}
+
+nav .inner{
+    max-width: 1000px;
+    height: 52px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+nav h1{
+    flex-grow: 1; /** 차지하는 비율 */
+    font-size: 22px;
+    font-weight: 500;
+}
+
+nav .menu{
+    display: flex;
+    gap: 12px;
+    margin-right: 18px;
+}
+
+nav .menu li a {
+    display: block;
+    padding: 6px;
+    font-size: 11px;
+
+}
+
+nav .menu li:hover a{
+    color: #0071e3;
+}
+
+
+nav .menu li.active a{
+    opacity: .5;
+    cursor: default; /*화살표*/
+}
+
+nav .menu li.active:hover a{
+    color: #1d1d1d;
+}
+
