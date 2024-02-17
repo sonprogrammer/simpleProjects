@@ -460,7 +460,7 @@ nav .menu li.active:hover a{
     z-index: 1;
 }
 
-.hero figures{
+.hero .figures{
     height: 808px;
 }
 
@@ -468,21 +468,21 @@ nav .menu li.active:hover a{
     transform: translate(74px, -64px);
 }
 
-.hero figure figcaption .caption-camera{
+.hero figcaption .caption-camera{
     width: 120px;
     height: 84px;
     background-image: url('../images/hero_ipad_caption_camera.png');
     transform: translate(43px, 580px);
 }
 
-.hero figure figcaption .caption-chip{
+.hero figcaption .caption-chip{
     width: 95px;
     height: 43px;
     background-image: url('../images/hero_ipad_caption_chip.png');
     transform: translate(589px, 510px);
 }
 
-.hero figure figcaption .caption-storage{
+.hero figcaption .caption-storage{
     width: 80px;
     height: 43px;
     background-image: url('../images/hero_ipad_caption_storage.png');
@@ -511,4 +511,68 @@ nav .menu li.active:hover a{
 }
 .hero .links{
     margin-top: 30px;
+}
+
+
+
+/* *Power */
+
+.power{
+    margin-top: 110px;
+}
+
+/* *Power / Multiple Apps */
+
+.power .muliple-apps h1{
+    background-image: url('../images/power_headline.png');
+    width: 500px;
+    height: 280px;
+    transform: translate(104px, 0);
+}
+
+.power .muliple-apps .figures{
+    height: 773px;
+}
+
+.power .muliple-apps figcaption{
+    background-image: url('../images/power_multiple_apps_caption.png');
+    width: 138px;
+    height: 46px;
+    transform: translate(703px, -47px);
+}
+
+
+/* *Power / Arcade */
+.power .arcade{
+
+}
+
+.power .arcade .figures{
+
+}
+
+.power .arcade figure{
+
+}
+
+.power .arcade figcaption{
+
+}
+
+
+/* *Pwer / Create */
+.power .create{
+
+}
+
+.power .create .figures{
+
+}
+
+.power .create figure{
+
+}
+
+.power .create figcaption{
+    
 }
