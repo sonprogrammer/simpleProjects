@@ -19,6 +19,12 @@ a{
     color: #1d1d1d;
 }
 
+img{
+    display: block;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
 .btn{
     justify-content: center;
     align-items: center;
