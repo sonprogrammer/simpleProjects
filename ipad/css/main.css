@@ -25,6 +25,27 @@ img{
     -webkit-user-drag: none;
 }
 
+p{
+    line-height: 1.6;
+}
+
+/* * Background image text*/
+.bgtext{
+    display: block;
+    text-indent: -9999px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* *Inner */
+.inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
 .btn{
     justify-content: center;
     align-items: center;
@@ -49,6 +70,27 @@ img{
     box-shadow: 0 0 0 4px #81b9f1; /*첫번째는 x 두번째는 y 세번째는 흐린값 네번째는 굵기*/
 }
 
+/* *Links */
+.links{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+a.link{
+    color: #0071e3;
+    font-size: 19px;
+    line-height: 1.3;
+}
+
+a.link:hover{
+    text-decoration: underline;
+}
+
+a.link::after{
+    content: ' >';
+}
+
 /* *Header */
 
 header{
@@ -57,8 +99,6 @@ header{
 
 header .inner{
     max-width: 1020px;
-    margin: 0 auto;
-    position: relative;
 }
 
 header ul.menu{
@@ -326,7 +366,6 @@ nav {
 nav .inner{
     max-width: 1000px;
     height: 52px;
-    margin: 0 auto;
     display: flex;
     align-items: center;
 }
@@ -369,15 +408,18 @@ nav .menu li.active:hover a{
 /* *Hero */
 
 .hero{
-
+    background-color: #f5f5f5;
 }
 
 .hero .inner{
-
+    padding-bottom: 110px;
 }
 
 .hero h1{
-
+    width: 221px;
+    height: 91px;
+    background-image: url('../images/hero_ipad_text.png');
+    
 }
 
 .hero figure{
@@ -405,16 +447,25 @@ nav .menu li.active:hover a{
 }
 
 .hero h2{
-
+    width: 738px;
+    height: 145px;
+    margin: 0 auto;
+    background-image: url('../images/hero_headline.png');
 }
 
 .hero p.pricing{
-
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
 }
 
 .hero p.description{
-
+    width: 88%;
+    margin: 18px auto 0;
+    font-size: 19px;
+    text-align: center;
 }
 .hero .links{
-    
+    margin-top: 30px;
 }
