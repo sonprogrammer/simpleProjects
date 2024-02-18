@@ -708,6 +708,61 @@ nav .menu li.active:hover a{
 
 
 
+  /*! Camera  */
+.camera{
+    margin-top: 303px;
+}
+
+
+/*! Camera / Stage */
+.camera .stage{
+    position: relative;
+}
+
+.camera .stage h1{
+    width: 650px;
+    height: 450px;
+    transform: translate(-25px, 0);
+    background-image: url('../images/camera_headline.png');
+}
+
+.camera .stage .info{
+    position: absolute;
+    top: 150px;
+    right: 0;
+}
+
+.camera .stage .figures{
+    height: 770px;
+    margin-top: 24px;
+}
+
+.camera .stage figure{
+    transform: translate(90px, 0);
+}
+
+.camera .stage figcaption{
+    width: 130px;
+    height: 110px;
+    transform: translate(-116px, 383px);
+    background-image: url('../images/camera_hardware_caption.png');
+}
+
+/* !Camera / Edit */
+.camera .edit .figures{
+    height: 910px;
+}
+
+.camera .edit figure{
+    transform: translate(20px, 0);
+}
+
+.camera .edit figcaption{
+    width: 130px;
+    height: 47px;
+    transform: translate(27px, 905px);
+    background-image: url('../images/camera_edit_caption.png');
+}
 
 
 
@@ -728,10 +783,6 @@ nav .menu li.active:hover a{
 
 
 
-
-
-
-  
 
 @keyframes sprite-icon {
     /* 1~10 */
