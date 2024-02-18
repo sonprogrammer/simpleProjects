@@ -162,6 +162,10 @@ a.link::after{
     transform: translate(0, 0);
 }
 
+.infos--large .info{
+    max-width: 410px;
+}
+
 .info .icon{
     width: 100px;
     height: 100px;
@@ -419,8 +423,8 @@ header .search .autocompletes{
     box-sizing: border-box;
     background-color: var(--color-white);
     position: absolute;
-    height: var(--header-height);
     left: 0;
+    top: var(--header-height);
 }
 
 header .search .autocompletes h3{
@@ -854,9 +858,45 @@ nav .menu li.active:hover a{
 
 /* !Acccessories */
 .accessories{
-    
+    margin-top: 195px;
 }
 
+.accessories h1{
+    width: 555px;
+    height: 343px;
+    margin: 0 auto;
+    background-image: url('../images/accessories_headline.png');
+}
+
+.accessories .figures{
+    height: 1021px;
+    margin-top: 34px;
+
+}
+
+.accessories figure{
+    transform: translate(-24px, 0);
+}
+
+.accessories figcaption .caption-memo{
+    width: 169px;
+    height: 41px;
+    transform: translate(790px, -52px);
+    background-image: url('../images/accessories_caption_memo.png');
+}
+
+.accessories figcaption .caption-supports{
+    width: 200px;
+    height: 70px;
+    transform: translate(163px, 821px);
+    background-image: url('../images/accessories_caption_supports.png');
+}
+
+.accessories .infos{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
 
 
