@@ -900,8 +900,151 @@ nav .menu li.active:hover a{
 
 
 
+/* !iPadOS */
+.ipados{
+    margin-top: 212px;
+}
+
+.ipados h1{
+    width: 530px;
+    height: 400px;
+    margin: 0 auto;
+    background-image: url('../images/ipados_headline.png');
+}
+
+.ipados .infos{
+    margin-top: 44px;
+    align-items: flex-end;
+}
+
+.ipados .figures{
+    height: 782px;
+    display: flex;
+}
+
+.ipados .figures > div {
+    flex-grow: 1;
+    position: relative;
+}
+
+.ipados .figure-split-view figure{
+    transform: translate(-205px, -312px);
+}
+
+.ipados .figure-split-view figcaption{
+    background-image: url('../images/ipados_split_view_caption.png');
+    width: 163px;
+    height: 53px;
+    transform: translate(200px, -38px);
+}
+
+.ipados .figure-widgets figure{
+    transform: translate(237px, 43px);
+}
+
+.ipados .figure-widgets figcaption{
+    background-image: url('../images/ipados_widgets_caption.png');
+    width: 161px;
+    height: 46px;
+    transform: translate(257px, 497px);
+}
+
+.ipados .figure-quick-note figure{
+    transform: translate(-625px, 232px);
+}
+
+.ipados .figure-quick-note figcaption{
+    background-image: url('../images/ipados_quick_note_caption.png');
+    width: 82px;
+    height: 97px;
+    transform: translate(511px, 470px);
+}
 
 
+
+/* !App */
+.apps{
+    margin-top: 368px;
+}
+
+.apps h1{
+    background-image: url('../images/apps_headline.png');
+    width: 500px;
+    height: 264px;
+    transform: translate(17px, 0);
+}
+
+.apps .infos{
+    margin-top: 36px;
+    margin-left: 82px;
+}
+
+.apps .figures{
+    display: flex;
+    height: 788px;
+}
+
+.apps .figures > div{
+    flex-grow: 1;
+    position: relative;
+}
+
+.apps .figure-masterclass figure{
+    transform: translate(578px, -431px);
+}
+
+.apps .figure-masterclass figcaption{
+    background-image: url('../images/apps_masterclass_caption.png');
+    width: 100px;
+    height: 25px;
+    transform: translate(26px, 690px);
+}
+
+.apps .figure-adobe figure{
+    transform: translate(-515px, 85px);
+}
+
+.apps .figure-adobe figcaption{
+    background-image: url('../images/apps_adobe_caption.png');
+    width: 105px;
+    height: 24px;
+    transform: translate(544px, 514px);
+}
+
+.apps .figure-fantasian figure{
+    transform: translate(-103px, 318px);
+}
+
+.apps .figure-fantasian figcaption{
+    width: 74px;
+    height: 22px;
+    transform: translate(24px, 483px);
+    background-image: url('../images/apps_fantasian_caption.png');
+}
+
+.apps .figure-books figure{
+    transform: translate(-133px, -150px);
+}
+
+.apps .figure-books figcaption{
+    width: 50px;
+    height: 27px;
+    transform: translate(397px, 707px);
+    background-image: url('../images/apps_books_caption.png');
+}
+
+.apps .figure-goodnotes figure{
+    transform: translate(-93px, 68px);
+}
+
+.apps .figure-goodnotes figcaption{
+    width: 99px;
+    height: 26px;
+    background-image: url('../images/apps_goodnotes_caption.png');
+    transform: translate(24px, 690px);
+}
+
+ 
 @keyframes sprite-icon {
     /* 1~10 */
     0.00% { background-position: 0 0; }
