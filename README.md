@@ -27,3 +27,9 @@
 1. html
 2. css
 3. javascript
+
+### 폰트
+1. 구글 폰트
+
+### 배포
+1. vercel ( address : https://simple-projects-bay.vercel.app/ )
