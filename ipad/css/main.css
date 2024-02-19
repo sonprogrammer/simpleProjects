@@ -566,6 +566,12 @@ nav .menu li.active:hover a{
 }
 
 
+/* *Main */
+main{
+    overflow-x: hidden;
+}
+
+
 
 /* *Hero */
 
@@ -1423,6 +1429,58 @@ footer .navigations .map li a:hover{
 }
 
 
+
+/* ! Footer / how-to-shop */
+footer .how-to-shop{
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--color-font-darkgray);
+}
+
+footer .how-to-shop a{
+    color: var(--color-link);
+}
+
+footer .how-to-shop a:hover{
+    text-decoration: underline;
+}
+
+footer .legal{
+    margin-top: 10px;
+    padding: 10px 0 40px;
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    gap: 50px;
+    font-size: 12px;
+    color: var(--color-font-darkgray);
+}
+
+footer .legal ul{
+    display: flex;
+    gap: 21px;
+    flex-grow: 1;
+}
+
+footer .legal ul li{
+    position: relative;
+}
+
+
+footer .legal ul li::after {
+    content: '|';
+    position: absolute;
+    right: -11px;
+    color: var(--color-border);
+}
+
+footer .legal ul li:last-child:after {
+    display: none;
+}
+
+
+footer .legal ul li:hover{
+    text-decoration: underline;
+}
 
 
  
