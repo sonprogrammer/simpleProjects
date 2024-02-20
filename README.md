@@ -17,7 +17,7 @@
 1. 눈누폰트(조선궁서체)
    
 ### 배포
-1. netlify( address : https://monumental-baklava-6ea958.netlify.app/ )
+1. netlify : [링크](https://monumental-baklava-6ea958.netlify.app)
 
 ---       
 
@@ -32,4 +32,4 @@
 1. 구글 폰트
 
 ### 배포
-1. vercel ( address : https://simple-projects-bay.vercel.app/ )
+1. Vercel : [링크](https://simple-projects-bay.vercel.app/)
