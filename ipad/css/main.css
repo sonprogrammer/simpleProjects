@@ -1544,17 +1544,108 @@ main{
 
 @media (max-width:1000px) {
     .camera{
-
+        margin-top: 165px;
     }
-    .camera .inner{
-        
+    .camera .stage h1{
+        width: 405px;
+        height: 270px;
+        transform: translate(0,0);
+    }
+    .camera .stage .info{
+        top: 0;
+    }
+    .camera .stage .figures{
+        height: 500px;
+    }
+    .camera .stage figure img{
+        width: 678px;
+    }
+    .camera .stage video{
+        top: 23px;
+        left: 50px;
+        transform: scale(.65);
+        transform-origin: 0 0;
+    }
+
+    .camera .stage .controller--play,
+    .camera .stage .controller--pause{
+        transform: translate(276px, -88px)rotate(-3deg);
+    }
+
+    .camera .stage figcaption{
+        transform: scale(.8) translate(-136px, 306px );
+    }
+
+    .camera .edit .figures{
+        height: auto;
+    }
+    .camera .edit figure{
+        transform: translate(40px, 0);
+    }
+    .camera .edit figure img{
+        width: 509px;
+    }
+    .camera .edit figcaption{
+        transform: scale(.8) translate(27px, 742px);
     }
 }
 
 
 
 @media (max-width:740px) {
+    .camera{
+        margin-top: 120px;
+    }
+    .camera .stage h1{
+        width: 304px;
+        height: 350px;
+        margin: 0 auto;
+        background-image: url('../images/camera_headline_mobile.png');
+    }
+    .camera .stage .info{
+        position: static;
+        margin-top: 30px;
+    }
+    .camera .stage .figures{
+        height: auto;
+        margin-top: 64px;
+    }
+    .camera .stage figure{
+        transform: translate(20px, 0);
+    }
+    .camera .stage figure img{
+        width: 450px;
+    }
+    .camera .stage video{
+        transform: scale(.43);
+        top: 15px;
+        left: 33px;
+    }   
 
+    .camera .stage .controller--play,
+    .camera .stage .controller--pause{
+        transform: translate(169px, -15px) rotate(-3deg);
+    }
+
+    .camera .stage figcaption{
+        width: 175px;
+        height: 43px;
+        transform: scale(1) translate(110px, -40px);
+        background-image: url('../images/camera_hardware_caption_mobile.png');
+    }
+
+    .camera .edit .figures{
+        margin-top: 30px;
+    }
+    .camera .edit figure{
+        width: 343px;
+    }
+    .camera .edit figure img{
+
+    }
+    .camera .edit figcaption{
+        transform: scale(.8) translate(27px,502px );
+    }
 }
 
 
