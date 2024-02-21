@@ -49,7 +49,8 @@ const searchDelayEls = [...searchWrapEl.querySelectorAll('li')];
 searchStarterEl.addEventListener('click', ()=>{
     showSearch()
 })
-searchCloserEl.addEventListener('click', ()=>{
+searchCloserEl.addEventListener('click', (e)=>{
+    e.stopPropagation()
     hideSearch();
 })
 searchShadowEl.addEventListener('click', ()=>{
@@ -99,6 +100,7 @@ const menuStarterEl = document.querySelector('.menu-starter')
 menuStarterEl.addEventListener('click', () => {
     if(headerEl.classList.contains('menuing')){
         headerEl.classList.remove('menuing')
+        searchInputEl.value = ''
         playScroll()
     }else{
         headerEl.classList.add('menuing')
@@ -106,6 +108,28 @@ menuStarterEl.addEventListener('click', () => {
     }
 })
 
+
+// *헤더 검색 
+const searchTextFieldEl = document.querySelector('header .textfield')
+const searchCancelerEl = document.querySelector('header .search-canceler')
+searchTextFieldEl.addEventListener('click', () =>{
+    headerEl.classList.add('searching--mobile')
+    searchInputEl.focus()
+})
+
+searchCancelerEl.addEventListener('click', () =>{
+    headerEl.classList.remove('searching--mobile')
+})
+
+
+
+window.addEventListener('resize', () =>{
+    if(window.innerWidth <= 740){
+        headerEl.classList.remove('searching')
+    }else{
+        headerEl.classList.remove('searching--mobile')
+    }
+})
 
 
 // *요소의 가시성 관찰
