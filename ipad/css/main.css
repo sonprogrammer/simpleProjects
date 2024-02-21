@@ -1372,6 +1372,82 @@ main{
     transform: translate(300px, 658px);
   }
 
+@media (max-width: 1000px) {
+    .display{
+        margin-top: 180px ;
+    }
+    .display .notes h1{
+        width: 400px;
+        height: 240px;
+        transform: translate(120px, 0);
+    }
+    .display .notes .figures{
+        height: 530px;
+    }
+    .display .notes figure{
+        transform: translate(80px, -10px);
+    }
+    .display .notes figure img{
+        width: 676px;
+    }
+    .display .notes figcaption{
+        transform: scale(.8) translate(540px, -34px);
+    }
+    .display .sharplay .figures{
+        height: 330px;
+    }
+    .display .sharplay figure{
+        transform: translate(-178ox, 0);
+    }
+    .display .sharplay figure img{
+        width: 682px;
+    }
+
+    .display .sharplay figcaption{
+    transform: scale(.8) translate(261px, 540px);
+    }
+}   
+
+@media (max-width: 740px){
+    .display .notes h1{
+        background-image: url('../images/display_headline_mobile.png');
+        width: 290px;
+        height: 308px;
+        transform: none;
+        margin: 0 auto;
+    }
+    .display .notes .figures{
+        height: auto;
+        margin-top: 60px;
+    }
+    .display .notes figure{
+        transform: translate(20px, 0);
+    }
+    .display .notes figure img{
+        width: 458px;
+    }
+    .display .notes figcaption{
+        transform:  scale(.8) translate(220px, -45px);
+    }
+    .display .sharplay{
+        margin-top: 30px;
+    }
+    .display .sharplay .figures{
+        height: auto;
+        order: 1;
+    }
+    .display .sharplay figure{
+        transform: translate(20px, 0);
+    }
+    .display .sharplay figure img{
+        width: 460px;
+    }
+
+    .display .sharplay figcaption{
+        transform: scale(.8) translate(261px, 358px);
+    }
+}
+
 
 
   /*! Camera  */
@@ -1463,6 +1539,22 @@ main{
     height: 47px;
     transform: translate(27px, 905px);
     background-image: url('../images/camera_edit_caption.png');
+}
+
+
+@media (max-width:1000px) {
+    .camera{
+
+    }
+    .camera .inner{
+        
+    }
+}
+
+
+
+@media (max-width:740px) {
+
 }
 
 
