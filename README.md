@@ -7,7 +7,7 @@
 2. css
 3. javascript
    
-### 라이브러리 & api
+### 라이브러리 및
 1. gsap
 2. swiper
 3. ifram(api)
