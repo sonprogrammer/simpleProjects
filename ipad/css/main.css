@@ -1810,6 +1810,60 @@ main{
 }
 
 
+@media (max-width: 1000px) {
+    .accessories{
+        margin-top: 120px;
+    }
+    .accessories h1{
+        width: 384px;
+        height: 243px;
+    }
+    .accessories .figures{
+        height: 700px;
+    }
+    .accessories figure{
+        transform: translate(12px, 0);
+    }
+
+    .accessories figure img{
+        width: 720px;
+    }
+    .accessories figcaption .caption-memo{
+        transform: scale(.8) translate(677px, -60px);
+    }
+    .accessories figcaption .caption-supports{
+        transform: scale(.8) translate(101px, 650px);
+    }
+}
+
+
+@media (max-width: 740px) {
+    .accessories h1{
+        width: 300px;
+        height: 190px;
+    }
+    .accessories .figures{
+        height: auto;
+        margin-top: 64px;
+    }
+
+    .accessories figure img{
+        width: 380px;
+    }
+    .accessories figcaption .caption-memo{
+        transform: scale(.8) translate(186px, -58px);
+    }
+    .accessories figcaption .caption-supports{
+        background-image: url('../images/accessories_caption_supports_mobile.png');
+        width: 160px;
+        height: 44px;
+        transform: scale(1) translate(31px, 335px);
+    }
+    .accessories .infos{
+        margin-top: 100px;
+    }
+}
+
 
 /* !iPadOS */
 .ipados{
