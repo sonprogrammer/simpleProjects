@@ -2459,6 +2459,17 @@ margin-bottom: 170px;
     color: #03a01e;
 }
 
+@media (max-width:1000px){
+    .environment p br{
+        display: none;
+    }    
+}
+
+
+@media (max-width:740px){
+
+}
+
 
 /* !Accessory Shop */
 .accessory-shop{
@@ -2480,6 +2491,12 @@ margin-bottom: 170px;
     margin-top: 50px;
 }
 
+@media (max-width:1000px){
+    .accessory-shop img{
+        width: 960px;
+    }    
+}
+
 
 /* !Trade */
 .trade{
@@ -2487,6 +2504,13 @@ margin-bottom: 170px;
     background-color: var(--color-section);
     text-align: center;
 }
+
+@media (max-width:1000px){
+    .trade p br{
+        display: none;
+    }    
+}
+
 
 
 /* !Compare */
@@ -2553,6 +2577,34 @@ margin-bottom: 170px;
 
 .compare .item a.link{
     font-size: 14px;
+}
+
+@media(max-width: 1000px){
+    .compare .items{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 500px;
+        margin: 68px auto 34px;
+    }
+}
+
+@media(max-width: 740px){
+    .compare .whitebox{
+        max-width: 430px;
+    }
+    .compare .items{
+        max-width: 190px;
+    }
+    .compare .item{
+        border-bottom: none;
+    }
+    .compare .links{
+        padding-top: 40px;
+        border-top: 1px solid var(--color-border);
+    }
+    .compare a.link{
+        margin-top: 0;
+    }
 }
 
 
