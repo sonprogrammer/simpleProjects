@@ -2344,6 +2344,48 @@ margin-bottom: 170px;
     transform: translate(470px, -620px);
 }
 
+@media (max-width:1000px){
+    .accessibility{
+        margin-top: 86px;
+        margin-bottom: 120px;
+    }
+    .accessibility h1{
+        width: 287px;
+        height: 205px;
+    }
+    .accessibility .infos{
+        max-width: 346px ;
+    }
+    .accessibility figure{
+        transform: translate(401px, -504);
+    }
+    .accessibility figure img{
+        width: 329px;
+    }
+}
+
+
+@media (max-width:740px){
+    .accessibility{
+        margin-bottom: 50px;
+    }
+    .accessibility h1{
+        height: 165px;
+        margin: 0 auto;
+    }
+    .accessibility .infos{
+        max-width: none ;
+    }
+
+    .accessibility .figures{
+        margin-top: 30px;
+    }
+    
+    .accessibility figure{
+        transform: translate(20px, 0);
+    }
+}
+
 
 /* !AR */
 .ar{
