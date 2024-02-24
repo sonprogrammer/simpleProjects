@@ -21,7 +21,7 @@
 
 ---       
 
-## 2. apple Ipad responsive web page
+## 2. apple iPad responsive web page
 
 ### 사용 언어
 1. html
