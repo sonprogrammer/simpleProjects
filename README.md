@@ -2,7 +2,10 @@
 
 ## 1. Starbucks page
 
+<img width="700" alt="스크린샷 2024-02-25 20 01 35" src="https://github.com/sonprogrammer/simpleProjects/assets/97154156/cd79096c-65f6-4421-adfd-fa2815b227ec">
+
 ### 사용 언어
+
 1. html
 2. css
 3. javascript
