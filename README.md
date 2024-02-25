@@ -26,6 +26,8 @@
 
 ## 2. apple iPad responsive web page
 
+<img width="700" alt="스크린샷 2024-02-25 20 01 35" src="https://github.com/sonprogrammer/simpleProjects/assets/97154156/e4c48533-fb69-4404-a24a-2c2911b10d37">
+
 ### 사용 언어
 1. html
 2. css
