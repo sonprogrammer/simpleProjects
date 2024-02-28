@@ -8,11 +8,15 @@ export default class MovieList extends Component {
         moiveStore.subscribe('movies', ()=>{
             this.render()
         })
+        moiveStore.subscribe('loading', ()=>{
+            this.render()
+        })
     }
     render() {
         this.el.classList.add("movie-list")
         this.el.innerHTML = /* html */`
             <div class="movies"></div>
+            <div class="the-loader hide" ></div>
         `
 
         const moivesEl = this.el.querySelector('.movies')
@@ -23,5 +27,8 @@ export default class MovieList extends Component {
                 }).el
             })
         )
+
+        const loaderEl = this.el.querySelector('.the-loader')
+        moiveStore.state.loading ? loaderEl.classList.remove('hide') : loaderEl.classList.add('hide')
     }
 }
