@@ -18,4 +18,29 @@ body {
   line-height: 1.4;
 }
 
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.headline {
+  margin-bottom: 40px;
+}
+
+.headline h1 {
+  margin-bottom: 40px;
+  font-family: Oswald, sans-serif;
+  font-size: 80px;
+  line-height: 1;
+}
+
+.headline h1 span {
+  color: var(--color-primary);
+}
+
+.headline p {
+  color: var(--color-white-30);
+}
+
 /*# sourceMappingURL=index.af20ad6e.css.map */

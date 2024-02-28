@@ -737,12 +737,39 @@ exports.default = (0, _heropy.createRouter)([
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _heropy = require("../core/heropy");
+var _headline = require("../components/Headline");
+var _headlineDefault = parcelHelpers.interopDefault(_headline);
 class Home extends (0, _heropy.Component) {
     render() {
-        this.el.innerHTML = "<h1>Hello</h1>";
+        const headline = new (0, _headlineDefault.default)().el;
+        this.el.classList.add("container");
+        this.el.append(headline);
     }
 }
 exports.default = Home;
+
+},{"../core/heropy":"57bZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../components/Headline":"gaVgo"}],"gaVgo":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _heropy = require("../core/heropy");
+class Headline extends (0, _heropy.Component) {
+    render() {
+        this.el.classList.add("headline");
+        this.el.innerHTML = /* html */ `
+        <h1>
+            <span>OMDb API</span><br/>
+            THE OPEN<br/>
+            MOVIE DATABASE
+        </h1>
+        <p>
+        The OMDb API is a RESTful web service to obtain movie information, 
+        all content and images on the site are contributed and maintained by our users.<br/>
+        If you find this service useful, please consider making a one-time donation or become a patron.
+        </p>
+        `;
+    }
+}
+exports.default = Headline;
 
 },{"../core/heropy":"57bZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["75sNA","gLLPy"], "gLLPy", "parcelRequireed43")
 
