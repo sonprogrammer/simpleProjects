@@ -829,6 +829,8 @@ parcelHelpers.defineInteropFlag(exports);
 var _heropy = require("../core/heropy");
 var _movie = require("../store/movie");
 var _movieDefault = parcelHelpers.interopDefault(_movie);
+var _movieItem = require("./MovieItem");
+var _movieItemDefault = parcelHelpers.interopDefault(_movieItem);
 class MovieList extends (0, _heropy.Component) {
     constructor(){
         super();
@@ -842,13 +844,45 @@ class MovieList extends (0, _heropy.Component) {
             <div class="movies"></div>
         `;
         const moivesEl = this.el.querySelector(".movies");
-        moivesEl.append((0, _movieDefault.default).state.movies.map((movie)=>{
-            return movie.Title;
+        moivesEl.append(...(0, _movieDefault.default).state.movies.map((movie)=>{
+            return new (0, _movieItemDefault.default)({
+                movie: movie
+            }).el;
         }));
     }
 }
 exports.default = MovieList;
 
-},{"../core/heropy":"57bZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../store/movie":"kq1bo"}]},["75sNA","gLLPy"], "gLLPy", "parcelRequireed43")
+},{"../core/heropy":"57bZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../store/movie":"kq1bo","./MovieItem":"fAzE8"}],"fAzE8":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _heropy = require("../core/heropy");
+class MovieItem extends (0, _heropy.Component) {
+    constructor(props){
+        super({
+            props,
+            tagName: "a"
+        });
+    }
+    render() {
+        const { movie } = this.props;
+        this.el.setAttribute("href", `#/movie?id=${movie.imdbID}`);
+        this.el.classList.add("movie");
+        this.el.style.backgroundImage = `url(${movie.Poster})`;
+        this.el.innerHTML = /*html */ `
+            <div class="info">
+                <div class="year">
+                    ${movie.Year}
+                </div>
+                <div class="title">
+                    ${movie.Title}
+                </div>
+            </div>
+        `;
+    }
+}
+exports.default = MovieItem;
+
+},{"../core/heropy":"57bZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["75sNA","gLLPy"], "gLLPy", "parcelRequireed43")
 
 //# sourceMappingURL=index.4d6bcbeb.js.map
