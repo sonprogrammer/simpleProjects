@@ -789,7 +789,7 @@ class Search extends (0, _heropy.Component) {
     render() {
         this.el.classList.add("search");
         this.el.innerHTML = /*html */ `
-         <input placeholder="Enter the movie title to search!"/>
+         <input value="${(0, _movieDefault.default).state.searchText}"placeholder="Enter the movie title to search!"/>
          <button class="btn btn-primary">Search</button>
         `;
         const inputEl = this.el.querySelector("input");
@@ -963,9 +963,10 @@ class Movie extends (0, _heropy.Component) {
         await (0, _movie.getMovieDetails)(history.state.id);
         console.log((0, _movieDefault.default).state.movie);
         const { movie } = (0, _movieDefault.default).state;
+        const bigPoster = movie.Poster.replace("SX300", "SX800");
         this.el.classList.add("container", "the-movie");
         this.el.innerHTML = /*html*/ `
-            <div style="background-image: url(${movie.Poster})"class="poster"></div>
+            <div style="background-image: url(${bigPoster})"class="poster"></div>
             <div class="specs">
                 <div class="title">
                     ${movie.Title}
