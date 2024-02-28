@@ -7,8 +7,6 @@ export default class MovieListMore extends Component {
             tagName: 'button'
         })
         movieStore.subscribe('pageMax', () =>{
-            // movieStore.state.page
-            // movieStore.state.pageMax
             const { page, pageMax } = movieStore.state
             pageMax > page ? this.el.classList.remove('hide') : this.el.classList.add('hide')
         })
@@ -19,6 +17,7 @@ export default class MovieListMore extends Component {
         this.el.textContent = 'View more...'
 
         this.el.addEventListener('click', async ()=>{
+            this.el.classList.add('hide')
             await searchMovies(movieStore.state.page + 1)
         })
     }

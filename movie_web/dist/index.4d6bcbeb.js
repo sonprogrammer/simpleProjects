@@ -812,31 +812,43 @@ const store = new (0, _heropy.Store)({
     page: 1,
     pageMax: 1,
     movies: [],
-    loading: false
+    loading: false,
+    message: "Search for the movie title"
 });
 exports.default = store;
 const searchMovies = async (page)=>{
     store.state.loading = true;
     store.state.page = page;
-    if (page === 1) store.state.movies = [];
-    const res = await fetch(`https://www.omdbapi.com/?apikey=ed9cb08b&s=${store.state.searchText}&page=${page}`);
-    const { Search, totalResults } = await res.json();
-    store.state.movies = [
-        ...store.state.movies,
-        ...Search
-    ];
-    store.state.pageMax = Math.ceil(Number(totalResults) / 10);
-    store.state.loading = false;
+    if (page === 1) {
+        store.state.movies = [];
+        store.state.message = "";
+    }
+    try {
+        const res = await fetch(`https://www.omdbapi.com/?apikey=ed9cb08b&s=${store.state.searchText}&page=${page}`);
+        const { Search, totalResults, Response, Error } = await res.json();
+        if (Response === "True") {
+            store.state.movies = [
+                ...store.state.movies,
+                ...Search
+            ];
+            store.state.pageMax = Math.ceil(Number(totalResults) / 10);
+        } else store.state.message = Error;
+        store.state.pageMax = 1;
+    } catch (e) {
+        console.log("searchMovies error", e);
+    } finally{
+        store.state.loading = false;
+    }
 };
 
 },{"../core/heropy":"57bZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8UDl3":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _heropy = require("../core/heropy");
-var _movie = require("../store/movie");
-var _movieDefault = parcelHelpers.interopDefault(_movie);
 var _movieItem = require("./MovieItem");
 var _movieItemDefault = parcelHelpers.interopDefault(_movieItem);
+var _movie = require("../store/movie");
+var _movieDefault = parcelHelpers.interopDefault(_movie);
 class MovieList extends (0, _heropy.Component) {
     constructor(){
         super();
@@ -846,15 +858,18 @@ class MovieList extends (0, _heropy.Component) {
         (0, _movieDefault.default).subscribe("loading", ()=>{
             this.render();
         });
+        (0, _movieDefault.default).subscribe("message", ()=>{
+            this.render();
+        });
     }
     render() {
         this.el.classList.add("movie-list");
         this.el.innerHTML = /* html */ `
-            <div class="movies"></div>
-            <div class="the-loader hide" ></div>
-        `;
-        const moivesEl = this.el.querySelector(".movies");
-        moivesEl.append(...(0, _movieDefault.default).state.movies.map((movie)=>{
+      ${(0, _movieDefault.default).state.message ? `<div class="message">${(0, _movieDefault.default).state.message}</div>` : '<div class="movies"></div>'}
+      <div class="the-loader hide"></div>
+    `;
+        const moviesEl = this.el.querySelector(".movies");
+        moviesEl?.append(...(0, _movieDefault.default).state.movies.map((movie)=>{
             return new (0, _movieItemDefault.default)({
                 movie: movie
             }).el;
@@ -865,7 +880,7 @@ class MovieList extends (0, _heropy.Component) {
 }
 exports.default = MovieList;
 
-},{"../core/heropy":"57bZf","../store/movie":"kq1bo","./MovieItem":"fAzE8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fAzE8":[function(require,module,exports) {
+},{"../core/heropy":"57bZf","./MovieItem":"fAzE8","../store/movie":"kq1bo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fAzE8":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _heropy = require("../core/heropy");
@@ -907,8 +922,6 @@ class MovieListMore extends (0, _heropy.Component) {
             tagName: "button"
         });
         (0, _movieDefault.default).subscribe("pageMax", ()=>{
-            // movieStore.state.page
-            // movieStore.state.pageMax
             const { page, pageMax } = (0, _movieDefault.default).state;
             pageMax > page ? this.el.classList.remove("hide") : this.el.classList.add("hide");
         });
@@ -917,6 +930,7 @@ class MovieListMore extends (0, _heropy.Component) {
         this.el.classList.add("btn", "view-more", "hide");
         this.el.textContent = "View more...";
         this.el.addEventListener("click", async ()=>{
+            this.el.classList.add("hide");
             await (0, _movie.searchMovies)((0, _movieDefault.default).state.page + 1);
         });
     }
