@@ -1,0 +1,21 @@
+html {
+  --color-black: #0e111d;
+  --color-white: #fff;
+  --color-white-50: #ffffff80;
+  --color-white-30: #ffffff4d;
+  --color-white-20: #fff3;
+  --color-white-10: #ffffff1a;
+  --color-white-5: #ffffff0d;
+  --color-primary: #fdc000;
+  --color-hover: #f86a05;
+  --color-area: #1c212e;
+}
+
+body {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-family: Roboto, sans-serif;
+  line-height: 1.4;
+}
+
+/*# sourceMappingURL=index.af20ad6e.css.map */
