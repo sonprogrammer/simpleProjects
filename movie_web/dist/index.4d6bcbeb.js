@@ -680,12 +680,6 @@ class Store {
             cb
         ] // 없으면 콜백 배열로 할당!
         ;
-    // 예시)
-    // observers = {
-    //   구독할상태이름: [실행할콜백1, 실행할콜백2]
-    //   movies: [cb, cb, cb],
-    //   message: [cb]
-    // }
     }
 }
 
@@ -741,17 +735,20 @@ var _headline = require("../components/Headline");
 var _headlineDefault = parcelHelpers.interopDefault(_headline);
 var _search = require("../components/Search");
 var _searchDefault = parcelHelpers.interopDefault(_search);
+var _movieList = require("../components/MovieList");
+var _movieListDefault = parcelHelpers.interopDefault(_movieList);
 class Home extends (0, _heropy.Component) {
     render() {
         const headline = new (0, _headlineDefault.default)().el;
         const search = new (0, _searchDefault.default)().el;
+        const movieList = new (0, _movieListDefault.default)().el;
         this.el.classList.add("container");
-        this.el.append(headline, search);
+        this.el.append(headline, search, movieList);
     }
 }
 exports.default = Home;
 
-},{"../core/heropy":"57bZf","../components/Headline":"gaVgo","../components/Search":"jqPPz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gaVgo":[function(require,module,exports) {
+},{"../core/heropy":"57bZf","../components/Headline":"gaVgo","../components/Search":"jqPPz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../components/MovieList":"8UDl3"}],"gaVgo":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _heropy = require("../core/heropy");
@@ -814,11 +811,44 @@ const store = new (0, _heropy.Store)({
 });
 exports.default = store;
 const searchMovies = async (page)=>{
+    if (page === 1) {
+        store.state.page = 1;
+        store.state.movies = [];
+    }
     const res = await fetch(`https://www.omdbapi.com/?apikey=ed9cb08b&s=${store.state.searchText}&page=${page}`);
-    const json = await res.json();
-    console.log(json);
+    const { Search } = await res.json();
+    store.state.movies = [
+        ...store.state.movies,
+        ...Search
+    ];
 };
 
-},{"../core/heropy":"57bZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["75sNA","gLLPy"], "gLLPy", "parcelRequireed43")
+},{"../core/heropy":"57bZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8UDl3":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _heropy = require("../core/heropy");
+var _movie = require("../store/movie");
+var _movieDefault = parcelHelpers.interopDefault(_movie);
+class MovieList extends (0, _heropy.Component) {
+    constructor(){
+        super();
+        (0, _movieDefault.default).subscribe("movies", ()=>{
+            this.render();
+        });
+    }
+    render() {
+        this.el.classList.add("movie-list");
+        this.el.innerHTML = /* html */ `
+            <div class="movies"></div>
+        `;
+        const moivesEl = this.el.querySelector(".movies");
+        moivesEl.append((0, _movieDefault.default).state.movies.map((movie)=>{
+            return movie.Title;
+        }));
+    }
+}
+exports.default = MovieList;
+
+},{"../core/heropy":"57bZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../store/movie":"kq1bo"}]},["75sNA","gLLPy"], "gLLPy", "parcelRequireed43")
 
 //# sourceMappingURL=index.4d6bcbeb.js.map
