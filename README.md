@@ -50,3 +50,5 @@
 
 ## 3. movie search web page
 
+### Deploy
+1. Vercel : [링크](https://simple-projects-seven.vercel.app/#/)
