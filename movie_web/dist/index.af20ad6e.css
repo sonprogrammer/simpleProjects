@@ -105,6 +105,66 @@ body {
   }
 }
 
+header {
+  z-index: 9;
+  background-color: #0e111be6;
+  align-items: flex-end;
+  gap: 40px;
+  padding: 20px 40px;
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+
+header .logo {
+  color: var(--color-white-50);
+  font-family: Oswald, sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+header .logo span {
+  color: var(--color-primary);
+}
+
+header nav ul {
+  gap: 14px;
+  display: flex;
+}
+
+header nav ul li a {
+  color: var(--color-white-50);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+header nav ul li a.active {
+  color: var(--color-primary);
+}
+
+header .user {
+  background-color: var(--color-area);
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  transition: all .3s;
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  right: 0;
+}
+
+header .user:hover {
+  transform: scale(1.2);
+}
+
+header .user img {
+  width: 100%;
+}
+
 .headline {
   margin-bottom: 40px;
 }
