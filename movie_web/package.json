@@ -1,6 +1,7 @@
 {
   "devDependencies": {
-    "parcel": "^2.11.0"
+    "parcel": "^2.11.0",
+    "vercel": "^33.5.3"
   },
   "name": "movie_web",
   "version": "1.0.0",
@@ -59,7 +60,6 @@
     "json-parse-even-better-errors": "^2.3.1",
     "json5": "^2.2.3",
     "lightningcss": "^1.24.0",
-
     "lines-and-columns": "^1.2.4",
     "lmdb": "^2.8.5",
     "lru-cache": "^6.0.0",
@@ -108,7 +108,8 @@
   },
   "scripts": {
     "dev": "parcel ./index.html",
-    "build": "parcel build ./index.html"
+    "build": "parcel build ./index.html",
+    "vercel": "vercel dev"
   },
   "keywords": [],
   "author": "",
