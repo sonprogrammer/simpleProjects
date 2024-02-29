@@ -24,6 +24,18 @@ body {
   padding: 40px 0;
 }
 
+@media (width <= 1200px) {
+  .container {
+    padding: 40px;
+  }
+}
+
+@media (width <= 600px) {
+  .container {
+    padding: 40px 20px;
+  }
+}
+
 .btn {
   color: var(--color-white);
   background-color: var(--color-area);
@@ -165,6 +177,20 @@ header .user img {
   width: 100%;
 }
 
+@media (width <= 600px) {
+  header {
+    padding: 14px 20px;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  header .user {
+    right: 20px;
+  }
+}
+
 footer {
   text-align: center;
   padding: 40px 40px 60px;
@@ -196,6 +222,12 @@ footer a:hover {
 
 .headline p {
   color: var(--color-white-30);
+}
+
+@media (width <= 600px) {
+  .headline h1 {
+    font-size: 60px;
+  }
 }
 
 .search {
@@ -345,6 +377,27 @@ footer a:hover {
   margin: 24px 0 6px;
   font-family: Oswald, sans-serif;
   font-size: 20px;
+}
+
+@media (width <= 1200px) {
+  .the-movie {
+    gap: 30px;
+  }
+
+  .the-movie .poster {
+    --width: 300px;
+  }
+}
+
+@media (width <= 720px) {
+  .the-movie {
+    display: block;
+  }
+
+  .the-movie .title {
+    margin-top: 50px;
+    font-size: 50px;
+  }
 }
 
 .about .photo {
