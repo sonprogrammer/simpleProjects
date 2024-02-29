@@ -347,4 +347,33 @@ footer a:hover {
   font-size: 20px;
 }
 
+.about .photo {
+  background-size: cover;
+  border-radius: 10px;
+  width: 230px;
+  height: 230px;
+  margin: 0 auto 20px;
+}
+
+.about .name {
+  margin-bottom: 20px;
+  font-family: Oswald, sans-serif;
+  font-size: 40px;
+}
+
+.about p {
+  text-align: center;
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
+.about a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.about a:hover {
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=index.af20ad6e.css.map */
