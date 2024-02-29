@@ -50,5 +50,15 @@
 
 ## 3. movie search web page
 
+<img width="700" alt="스크린샷 2024-02-29 18 21 08" src="https://github.com/sonprogrammer/simpleProjects/assets/97154156/dd2ec331-90dc-4e27-bf91-e5b3dccb8816">
+
+### Language
+1. html
+2. css
+3. javascript
+
+### Font
+1. 구글 폰트 (영문: Roboto 한글: Noto Sans KR)
+
 ### Deploy
 1. Vercel : [링크](https://simple-projects-seven.vercel.app/#/)
