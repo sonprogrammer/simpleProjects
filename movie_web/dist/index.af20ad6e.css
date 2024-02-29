@@ -76,6 +76,35 @@ body {
   }
 }
 
+.skeleton {
+  background-color: var(--color-area);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton:after {
+  content: "";
+  background-image: linear-gradient(270deg, #fff0, #ffffff1a, #fff0);
+  width: 100%;
+  height: 100%;
+  animation: 2s infinite skeleton-loader;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+@keyframes skeleton-loader {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 .headline {
   margin-bottom: 40px;
 }
@@ -219,9 +248,22 @@ body {
   line-height: 1;
 }
 
+.the-movie .title.skeleton {
+  height: 70px;
+}
+
 .the-movie .labels {
   color: var(--color-primary);
   margin-bottom: 20px;
+}
+
+.the-movie .labels.skeleton {
+  height: 30px;
+}
+
+.the-movie .plot.skeleton {
+  width: 80%;
+  height: 400px;
 }
 
 .the-movie h3 {

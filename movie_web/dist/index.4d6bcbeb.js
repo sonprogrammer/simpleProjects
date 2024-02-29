@@ -588,7 +588,7 @@ const root = document.querySelector("#root");
 root.append(new (0, _appDefault.default)().el);
 (0, _indexDefault.default)();
 
-},{"./App":"2kQhy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./routes/index":"3L9mC"}],"2kQhy":[function(require,module,exports) {
+},{"./App":"2kQhy","./routes/index":"3L9mC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2kQhy":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _heropy = require("./core/heropy");
@@ -732,7 +732,7 @@ exports.default = (0, _heropy.createRouter)([
     }
 ]);
 
-},{"../core/heropy":"57bZf","./Home":"0JSNG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./Movie":"1LTyN"}],"0JSNG":[function(require,module,exports) {
+},{"../core/heropy":"57bZf","./Home":"0JSNG","./Movie":"1LTyN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"0JSNG":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _heropy = require("../core/heropy");
@@ -960,11 +960,19 @@ var _movie = require("../store/movie");
 var _movieDefault = parcelHelpers.interopDefault(_movie);
 class Movie extends (0, _heropy.Component) {
     async render() {
+        this.el.classList.add("container", "the-movie");
+        this.el.innerHTML = /*html */ `
+          <div class="poster skeleton"></div>
+          <div class="specs">
+            <div class="title skeleton"></div>
+            <div class="labels skeleton"></div>
+            <div class="plot skeleton"></div>
+          </div>
+        `;
         await (0, _movie.getMovieDetails)(history.state.id);
         console.log((0, _movieDefault.default).state.movie);
         const { movie } = (0, _movieDefault.default).state;
         const bigPoster = movie.Poster.replace("SX300", "SX800");
-        this.el.classList.add("container", "the-movie");
         this.el.innerHTML = /*html*/ `
             <div style="background-image: url(${bigPoster})"class="poster"></div>
             <div class="specs">
