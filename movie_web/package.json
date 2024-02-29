@@ -4,7 +4,6 @@
   },
   "name": "movie_web",
   "version": "1.0.0",
-  "main": "index.js",
   "dependencies": {
     "abortcontroller-polyfill": "^1.7.5",
     "ansi-regex": "^5.0.1",
