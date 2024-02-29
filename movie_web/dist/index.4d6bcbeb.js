@@ -764,7 +764,7 @@ class TheHeader extends (0, _heropy.Component) {
             </nav>
 
             <a href="#/about" class="user">
-                <img src="../images/favicon.png" alt="User" />
+                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20140111_39%2Fconselot_13894439521335n6j2_JPEG%2Fimg13.jpg&type=sc960_832" alt="User" />
             </a>
         `;
     }

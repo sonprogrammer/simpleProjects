@@ -152,9 +152,9 @@ header .user {
   margin: auto;
   transition: all .3s;
   position: absolute;
-  top: 40px;
+  top: 0;
   bottom: 0;
-  right: 0;
+  right: 40px;
 }
 
 header .user:hover {
