@@ -41,7 +41,7 @@
 1. Vercel : [링크](https://simple-projects-bay.vercel.app/)
 
 ### Inspiration & new chanllenge etc...
-1. sprite Icon animation
+1. sprite Icon animation.
    
    ex)
    
