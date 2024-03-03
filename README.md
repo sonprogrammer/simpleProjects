@@ -49,7 +49,7 @@
 
 
 
-## 3. movie search web page
+## 3. Movie search web page
 
 <img width="700" alt="스크린샷 2024-02-29 18 21 08" src="https://github.com/sonprogrammer/simpleProjects/assets/97154156/dd2ec331-90dc-4e27-bf91-e5b3dccb8816">
 
