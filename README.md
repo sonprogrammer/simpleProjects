@@ -1,4 +1,4 @@
-# 단순 프로젝트's(for 기본기 탄탄,)
+# Simple Projects
 
 ## 1. Starbucks page
 
