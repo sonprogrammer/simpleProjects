@@ -57,9 +57,13 @@
 1. html
 2. css
 3. javascript
+4. typescript(ts branch)
 
 ### Font
 1. 구글 폰트 (영문: Roboto 한글: Noto Sans KR)
 
 ### Deploy
 1. Vercel : [링크](https://simple-projects-seven.vercel.app/#/)
+
+### Reference
+1. Transform tools.(https://transform.tools/) To set up types easily
