@@ -9,7 +9,7 @@ interface State{
 }
 
 export default class TheHeader extends Component {
-  public state = {} as State 
+  public state!:State 
   constructor() {
     super({
       tagName: 'header',
@@ -31,7 +31,7 @@ export default class TheHeader extends Component {
       },
     })
     window.addEventListener('popstate', ()=>{
-        this.render()
+        this.render() 
     })
   }
 
