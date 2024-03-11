@@ -1,6 +1,15 @@
 import { Component } from '../core/heropy'
 
+interface State{
+  [key: string]: unknown
+  menus: {
+    name:string
+    href: string
+  }[]
+}
+
 export default class TheHeader extends Component {
+  public state!:State 
   constructor() {
     super({
       tagName: 'header',
@@ -22,7 +31,7 @@ export default class TheHeader extends Component {
       },
     })
     window.addEventListener('popstate', ()=>{
-        this.render()
+        this.render() 
     })
   }
 
