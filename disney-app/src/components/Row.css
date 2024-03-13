@@ -86,6 +86,7 @@
     margin-right: 10px;
     transform: transform .45;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .row__poster:hover{
