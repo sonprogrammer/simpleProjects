@@ -37,7 +37,7 @@ const Nav = () => {
             src='./images/logo.svg'
             alt='Disney Plus Logo'
             onClick={() => {
-              window.location.href('/')
+              window.location.href = '/main'
             }}
           />
         </Logo>
