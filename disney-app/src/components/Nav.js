@@ -1,11 +1,25 @@
 import React, { useEffect, useState } from 'react'
-import { NavWrapper, Logo, Input, Login } from './Nav-styles'
+import {
+  NavWrapper,
+  Logo,
+  Input,
+  Login,
+  SignOut,
+  UserImg,
+  DropDown,
+} from './Nav-styles'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth'
+import {
+  GoogleAuthProvider,
+  getAuth,
+  onAuthStateChanged,
+  signInWithPopup,
+} from 'firebase/auth'
 
 const Nav = () => {
   const [show, setShow] = useState(false)
   const [searchValue, setSearchValue] = useState('')
+  const [userData, setUserData] = useState({})
 
   const auth = getAuth()
   const provider = new GoogleAuthProvider()
@@ -13,6 +27,17 @@ const Nav = () => {
 
   const navigate = useNavigate()
 
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        if (pathname === '/') {
+          navigate('/main')
+        }
+      } else {
+        navigate('/')
+      }
+    })
+  }, [])
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
@@ -28,17 +53,19 @@ const Nav = () => {
       setShow(false)
     }
   }
-  const handleChane = (e)=>{
+  const handleChane = (e) => {
     setSearchValue(e.target.value)
     navigate(`/search?q=${e.target.value}`)
   }
 
-  const handleAuth = (e)=>{
+  const handleAuth = (e) => {
     signInWithPopup(auth, provider)
-    .then(result =>{})
-    .catch(error=>{
-      console.log(error)
-    })
+      .then((result) => {
+        setUserData(result.user)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
   }
 
   return (
@@ -57,13 +84,21 @@ const Nav = () => {
         {pathname === '/' ? (
           <Login onClick={handleAuth}>Login</Login>
         ) : (
-          <Input
-            className='nav__input'
-            type='text'
-            placeholder='search'
-            value={searchValue}
-            onChange={handleChane}
-          />
+          <>
+            <Input
+              className='nav__input'
+              type='text'
+              placeholder='search'
+              value={searchValue}
+              onChange={handleChane}
+            />
+            <SignOut>
+              <UserImg src={userData.photoURL} alt={userData.displayName}/>
+              <DropDown>
+                <span>Sign Out</span>
+              </DropDown>
+            </SignOut>
+          </>
         )}
       </NavWrapper>
     </div>

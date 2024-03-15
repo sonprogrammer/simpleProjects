@@ -54,3 +54,10 @@ export const Input = styled.input`
     padding: 5px;
     border: none;
 `
+
+export const SignOut = styled.div``
+
+export const UserImg = styled.div``
+
+export const DropDown = styled.div``
+
