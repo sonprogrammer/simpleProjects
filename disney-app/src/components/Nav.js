@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { NavWrapper, Logo, Input, Login } from './Nav-styles'
 import { useLocation, useNavigate } from 'react-router-dom'
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth'
 
 const Nav = () => {
   const [show, setShow] = useState(false)
   const [searchValue, setSearchValue] = useState('')
+
+  const auth = getAuth()
+  const provider = new GoogleAuthProvider()
   const { pathname } = useLocation()
 
   const navigate = useNavigate()
@@ -29,6 +33,14 @@ const Nav = () => {
     navigate(`/search?q=${e.target.value}`)
   }
 
+  const handleAuth = (e)=>{
+    signInWithPopup(auth, provider)
+    .then(result =>{})
+    .catch(error=>{
+      console.log(error)
+    })
+  }
+
   return (
     <div>
       <NavWrapper show={show}>
@@ -43,7 +55,7 @@ const Nav = () => {
         </Logo>
 
         {pathname === '/' ? (
-          <Login>Login</Login>
+          <Login onClick={handleAuth}>Login</Login>
         ) : (
           <Input
             className='nav__input'
