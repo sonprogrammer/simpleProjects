@@ -14,6 +14,7 @@ import {
   getAuth,
   onAuthStateChanged,
   signInWithPopup,
+  signOut,
 } from 'firebase/auth'
 
 const Nav = () => {
@@ -68,6 +69,17 @@ const Nav = () => {
       })
   }
 
+  const handleLogout = () => {
+    signOut(auth)
+      .then(() => {
+        setUserData({})
+        navigate('/')
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+
   return (
     <div>
       <NavWrapper show={show}>
@@ -93,9 +105,9 @@ const Nav = () => {
               onChange={handleChane}
             />
             <SignOut>
-              <UserImg src={userData.photoURL} alt={userData.displayName}/>
+              <UserImg src={userData.photoURL} alt={userData.displayName} />
               <DropDown>
-                <span>Sign Out</span>
+                <span onClick={handleLogout}>Sign Out</span>
               </DropDown>
             </SignOut>
           </>
