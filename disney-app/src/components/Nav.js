@@ -16,22 +16,22 @@ import {
   signInWithPopup,
   signOut,
 } from 'firebase/auth'
+import { useDispatch, useSelector } from 'react-redux'
+import { removeUser, setUser } from '../store/userSlice'
 
 const Nav = () => {
 
-
-  const initialUserData = localStorage.getItem('userData') ?
-    JSON.parse(localStorage.getItem('userData')) : {}
-  
   const [show, setShow] = useState(false)
   const [searchValue, setSearchValue] = useState('')
-  const [userData, setUserData] = useState(initialUserData)
 
   const auth = getAuth()
   const provider = new GoogleAuthProvider()
   const { pathname } = useLocation()
 
   const navigate = useNavigate()
+
+  const dispatch = useDispatch()
+  const user = useSelector(state => state.user)
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -67,7 +67,13 @@ const Nav = () => {
   const handleAuth = (e) => {
     signInWithPopup(auth, provider)
       .then((result) => {
-        setUserData(result.user)
+        dispatch(setUser({
+          id: result.user.uid,
+          email: result.user.email,
+          displayName: result.user.displayName,
+          photoURL: result.user.photoURL
+        }))
+        
         localStorage.setItem('userData', JSON.stringify(result.user))
       })
       .catch((error) => {
@@ -78,7 +84,7 @@ const Nav = () => {
   const handleLogout = () => {
     signOut(auth)
       .then(() => {
-        setUserData({})
+        dispatch(removeUser())
         navigate('/')
       })
       .catch((error) => {
@@ -111,7 +117,7 @@ const Nav = () => {
               onChange={handleChane}
             />
             <SignOut>
-              <UserImg src={userData.photoURL} alt={userData.displayName} />
+              <UserImg src={user.photoURL} alt={user.displayName} />
               <DropDown>
                 <span onClick={handleLogout}>Sign Out</span>
               </DropDown>
