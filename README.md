@@ -76,6 +76,7 @@
 3. javascript
 4. React
 5. swiper
+6. styled components
 
 ### Deploy
 1. firebase : [링크](https://disney-b43d1.web.app/main)
