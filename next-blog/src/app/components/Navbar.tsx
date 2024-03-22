@@ -3,8 +3,13 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
 import NavItem from './NavItem'
+import { User } from '@prisma/client'
 
-export default function Navbar() {
+interface NavbarProps {
+  currentUser?: User | null
+}
+
+export default function Navbar({currentUser}: NavbarProps) {
     const [menu, setMenu] = useState(false)
 
 
@@ -25,7 +30,7 @@ export default function Navbar() {
         </div>
 
         <div className='hidden sm:block'>
-            <NavItem />
+            <NavItem currentUser={currentUser}/>
         </div>
         
       </div>

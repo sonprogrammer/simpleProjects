@@ -27,7 +27,7 @@ export default function RegisterPage() {
             console.log(data)
             router.push('/auth/login')
         } catch (error) {
-            console.log('whate',error)
+            console.log('what',error)
         }finally{
             setIsLoading(false)
         }
