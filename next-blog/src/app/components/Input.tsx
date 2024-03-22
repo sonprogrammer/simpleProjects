@@ -38,6 +38,7 @@ export default function Input({
            p-4
            pt-6
            font-light
+           border-2
            bg-white
            rounded-md
            outline-none
