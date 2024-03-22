@@ -27,7 +27,7 @@ export default function RegisterPage() {
             console.log(data)
             router.push('/auth/login')
         } catch (error) {
-            console.log(error)
+            console.log('whate',error)
         }finally{
             setIsLoading(false)
         }
@@ -37,8 +37,7 @@ export default function RegisterPage() {
     <section className='grid h-[calc(100vh_-_56px)] place-items-center'>
         <form 
             onSubmit={handleSubmit(onSubmit)}
-            className='flex flex-col justify-center gap-4 min-w-[350px]'
-        action="">
+            className='flex flex-col justify-center gap-4 min-w-[350px]'>
             <h1 className='text-2xl'>Register</h1>
         <Input 
             id="email"
