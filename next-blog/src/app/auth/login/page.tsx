@@ -11,7 +11,6 @@ import { FieldValues, SubmitHandler, useForm } from 'react-hook-form'
 
 export default function LoginPage() {
     const [isLoading, setIsLoading] = useState(false)
-    const router = useRouter()
 
     const { register, handleSubmit, formState: {errors}} = useForm<FieldValues>({
         defaultValues:{
@@ -23,12 +22,12 @@ export default function LoginPage() {
     const onSubmit: SubmitHandler<FieldValues> = async (body) =>{
         setIsLoading(true)
         try {
-            const data = await signIn('credentials', body)
+            const data = signIn('credentials', {...body, callbackUrl:'/'})
             console.log('data', data)
-
         } catch (error) {
             console.log(error)
-        }finally{
+        }
+        finally{
             setIsLoading(false)
         }
     }
