@@ -53,6 +53,7 @@ export default function ProductUploadPage() {
                 subtitle='upload your product'
             />
 
+
           <Input
             id='title'
             label='Title'
