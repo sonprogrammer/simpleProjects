@@ -5,6 +5,8 @@ import Container from '@/app/components/Container'
 import Heading from '@/app/components/Heading'
 import ImageUpload from '@/app/components/ImageUpload'
 import Input from '@/app/components/Input'
+import { categories } from '@/app/components/categories/Categories'
+import CategoryInput from '@/app/components/categories/CategoryInput'
 import React, { useState } from 'react'
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form'
 
@@ -31,6 +33,8 @@ export default function ProductUploadPage() {
   })
 
   const imageSrc = watch('imageSrc')
+
+  const category = watch('category')
   
   const onSubmit: SubmitHandler<FieldValues> = (data) => {}
 
@@ -96,7 +100,21 @@ export default function ProductUploadPage() {
             gap-3
             max-h-[50vh]
             overflow-y-auto
-            '></div>
+            '>
+
+            {categories.map((item)=>(
+              <div key={item.label} className='col-span-1'>
+                  <CategoryInput 
+                    onClick={(category)=> setCustomValue('category',category)}
+                    selected={category === item.path}
+                    label={item.label}
+                    icon={item.icon}
+                    path={item.path}
+                  />
+              </div>
+            ))}
+              
+            </div>
           <hr />
 
           <Button label='상품 생성하기' />
