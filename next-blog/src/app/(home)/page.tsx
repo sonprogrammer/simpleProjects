@@ -1,5 +1,7 @@
 import Image from "next/image";
 import getProducts, { ProductsParams } from "../actions/getProducts";
+import Container from "../components/Container";
+import EmptyState from "../components/EmptyState";
 
 interface HomeProps{
   searchParams: ProductsParams
@@ -12,8 +14,21 @@ export default async function Home({searchParams}: HomeProps) {
   console.log(products)
   
   return (
-   <main>
-    anyone can see
-   </main>
+   <Container>
+    {/* category */}
+
+    <EmptyState />
+    {/* {
+      products?.data.length === 0 
+      ?
+      <EmptyState />
+      :
+      <>
+      <div>
+        hi
+      </div>
+      </>
+    } */}
+   </Container>
   );
 }
