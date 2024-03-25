@@ -9,11 +9,14 @@ import KakaoMap from '@/app/components/KakaoMap'
 import { categories } from '@/app/components/categories/Categories'
 import CategoryInput from '@/app/components/categories/CategoryInput'
 import dynamic from 'next/dynamic'
+import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form'
+import axios from 'axios'
 
 export default function ProductUploadPage() {
   const [isLoading, setIsLoading] = useState(false)
+  const router = useRouter()
 
   const {
     register,
@@ -45,7 +48,20 @@ export default function ProductUploadPage() {
     ssr: false
   })
   
-  const onSubmit: SubmitHandler<FieldValues> = (data) => {}
+  const onSubmit: SubmitHandler<FieldValues> = (data) => {
+    setIsLoading(true)
+
+    axios.post('/api/products', data)
+      .then(response =>{
+        router.push(`/products/${response.data.id}`)
+      })
+      .catch((err)=>{
+        console.log(err)
+      })
+      .finally(()=>{
+        setIsLoading(false)
+      })
+  }
 
 
   const setCustomValue = (id: string, value: any) =>{

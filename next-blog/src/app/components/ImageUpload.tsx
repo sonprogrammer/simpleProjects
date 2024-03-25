@@ -9,7 +9,9 @@ interface ImageUploadProps {
 }
 
 export default function ImageUpload({ onChange, value }: ImageUploadProps) {
+
   const handleUpload = (result: any) => {
+    console.log('result',result)
     onChange(result.info.secure_url)
   }
 
@@ -17,7 +19,7 @@ export default function ImageUpload({ onChange, value }: ImageUploadProps) {
 
   return (
     <CldUploadWidget
-      onUploadAdded={handleUpload}
+      onUpload={handleUpload}
       uploadPreset={uploadPreset}
       options={{
         maxFiles: 1,
