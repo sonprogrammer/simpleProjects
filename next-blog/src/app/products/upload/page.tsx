@@ -3,6 +3,7 @@
 import Button from '@/app/components/Button'
 import Container from '@/app/components/Container'
 import Heading from '@/app/components/Heading'
+import ImageUpload from '@/app/components/ImageUpload'
 import Input from '@/app/components/Input'
 import React, { useState } from 'react'
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form'
@@ -29,31 +30,34 @@ export default function ProductUploadPage() {
     },
   })
 
-  const onSubmit: SubmitHandler<FieldValues> = (data) => {
+  const imageSrc = watch('imageSrc')
+  
+  const onSubmit: SubmitHandler<FieldValues> = (data) => {}
 
+
+  const setCustomValue = (id: string, value: any) =>{
+    setValue(id, value)
   }
-
+  
   return (
     <Container>
-      
       <div
         className='
             max-w-screen-lg
             mx-auto
         '>
         <form
-            className='
+          className='
                 flex
                 flex-col
                 gap-8
             '
-            onSubmit={handleSubmit(onSubmit)}
-        >
-            <Heading 
-                title='Product Upload'
-                subtitle='upload your product'
-            />
-
+          onSubmit={handleSubmit(onSubmit)}>
+          <Heading title='Product Upload' subtitle='upload your product' />
+          <ImageUpload 
+            onChange={(value) => setCustomValue('imageSrc', value)}
+            value={imageSrc}
+          />
 
           <Input
             id='title'
