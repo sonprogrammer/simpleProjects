@@ -35,7 +35,7 @@ export default function CategoryInput({
       <Icon size={30} />
       <div className='font-semibold'>
         {label}
-      </div>
+      </div> 
     </div>
   )
 }
