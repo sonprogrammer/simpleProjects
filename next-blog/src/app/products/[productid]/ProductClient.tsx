@@ -1,6 +1,7 @@
 'use client'
 import Button from '@/app/components/Button'
 import Container from '@/app/components/Container'
+import { categories } from '@/app/components/categories/Categories'
 import ProductHead from '@/app/components/products/ProductHead'
 import ProductInfo from '@/app/components/products/ProductInfo'
 import { Product, User } from '@prisma/client'
@@ -19,6 +20,8 @@ export default function ProductClient({ product, currentUser }: ProductClientPro
         ssr: false
     })
 
+    const category = categories.find((item) => item.path === product.category)
+
     const router = useRouter()
 
     return (
@@ -34,7 +37,12 @@ export default function ProductClient({ product, currentUser }: ProductClientPro
                         currentUser={currentUser}
                     />
                     <div className='grid grid-cols-1 mt-6 md:grid-cols-2 md:gap-10'>
-                        <ProductInfo />
+                        <ProductInfo 
+                            user={product.user}
+                            category={category}
+                            createdAt={product.createdAt}
+                            description={product.description}
+                        />
                         <div>
                             <KakaoMap detailPage 
                                       latitude={product.latitude} 
