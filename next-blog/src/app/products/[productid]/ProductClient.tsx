@@ -27,7 +27,12 @@ export default function ProductClient({ product, currentUser }: ProductClientPro
                 className='max-w-screen-lg mx-auto'
             >
                 <div className='flex flex-col gap-6'>
-                    <ProductHead />
+                    <ProductHead 
+                        title={product.title}
+                        imageSrc={product.imageSrc}
+                        id={product.id}
+                        currentUser={currentUser}
+                    />
                     <div className='grid grid-cols-1 mt-6 md:grid-cols-2 md:gap-10'>
                         <ProductInfo />
                         <div>
