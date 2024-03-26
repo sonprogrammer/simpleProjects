@@ -39,11 +39,10 @@ export default async function Home({searchParams}: HomeProps) {
          ">
         {products.data.map((product) =>(
           <ProductCard 
-            currentUser={currentUser}
-            key={product.id}
-            data={product}
+          currentUser={currentUser}
+          key={product.id}
+          data={product}
           />
-
         ))}
       </div>
       </>
