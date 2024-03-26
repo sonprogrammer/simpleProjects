@@ -5,6 +5,7 @@ import EmptyState from "../components/EmptyState";
 import ProductCard from "../components/ProductCard";
 import getCurrentUser from "../actions/getCurrentUser";
 import FloatingButton from "../components/FloatingButton";
+import Categories from "../components/categories/Categories";
 
 interface HomeProps{
   searchParams: ProductsParams
@@ -20,7 +21,7 @@ export default async function Home({searchParams}: HomeProps) {
   return (
    <Container>
     {/* category */}
-
+    <Categories />
     {
       products?.data.length === 0 
       ?

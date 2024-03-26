@@ -22,11 +22,11 @@ export default function EmptyState({
   return (
     <div
         className='
-        h=[60vh]
+        h-[60vh]
         flex
         flex-col
         gap-2
-        justify-content
+        justify-center
         items-center
         '
     >
