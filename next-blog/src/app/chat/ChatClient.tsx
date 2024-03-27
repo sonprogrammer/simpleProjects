@@ -10,10 +10,10 @@ interface ChatClientProps{
 
 export default function ChatClient({ currentUser}: ChatClientProps) {
 
-    const [reciever, setReceiver] = useState({
-        recieverId: '',
-        recieverName:'',
-        recieverImage: '',
+    const [receiver, setReceiver] = useState({
+        receiverId: '',
+        receiverName:'',
+        receiverImage: '',
     })
     
     const [layout, setLayout] = useState(false)
