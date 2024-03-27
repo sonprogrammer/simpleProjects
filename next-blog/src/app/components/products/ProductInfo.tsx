@@ -13,7 +13,7 @@ interface ProductInfoProps{
         icon: IconType,
         label:string,
         description:string
-    }
+    } | undefined
 }
 
 
