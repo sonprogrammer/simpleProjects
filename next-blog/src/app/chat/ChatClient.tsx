@@ -5,6 +5,7 @@ import { User } from '@prisma/client'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import useSWR from 'swr'
+import Contacts from '../components/chat/Contacts'
 
 interface ChatClientProps{
     currentUser?: User | null 
@@ -28,7 +29,7 @@ export default function ChatClient({ currentUser}: ChatClientProps) {
     })
     console.log(users)
 
-    users?.find((user: TUserWithChat)=> user.email === currentUser?.email)
+    const currentUserWithMessage = users?.find((user: TUserWithChat)=> user.email === currentUser?.email)
 
     if(isLoading) return <p>Loading...</p>
     if(error){
@@ -45,7 +46,13 @@ export default function ChatClient({ currentUser}: ChatClientProps) {
       <div className='grid grid-cols-[1fr] md:grid-cols-[300px_1fr]'>
 
         <section className={`md:flex ${layout && 'hidden'}`}>
-            {/* contact component */}
+            <Contacts 
+                users={users}
+                currentUser={currentUserWithMessage}
+                setLayout={setLayout}
+                setReceiver={setReceiver}
+
+            />
         </section>
         <section className={`md:flex ${!layout && 'hidden'}`}>
             {/* chat component */}
