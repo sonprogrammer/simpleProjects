@@ -3,11 +3,11 @@ import getCurrentUser from '../actions/getCurrentUser'
 import ChatClient from './ChatClient'
 
 export default async function ChatPage() {
-    const currentUser = getCurrentUser()
+    const currentUser = await getCurrentUser()
     
   return (
     <div>
-      <ChatClient />
+      <ChatClient currentUser={currentUser}/>
     </div>
   )
 }
