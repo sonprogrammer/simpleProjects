@@ -1,4 +1,4 @@
-import previewImage from '@/helpers/previewimage'
+import previewImage from '@/helpers/previewImage'
 import uploadImage from '@/helpers/uploadImage'
 import axios from 'axios'
 import React, { FormEvent, useRef, useState } from 'react'
