@@ -6,6 +6,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import useSWR from 'swr'
 import Contacts from '../components/chat/Contacts'
+import Chat from '../components/chat/Chat'
 
 interface ChatClientProps{
     currentUser?: User | null 
@@ -55,7 +56,11 @@ export default function ChatClient({ currentUser}: ChatClientProps) {
             />
         </section>
         <section className={`md:flex ${!layout && 'hidden'}`}>
-            {/* chat component */}
+            <Chat 
+              currentUser={currentUserWithMessage}
+              receiver={receiver}
+              setLayout={setLayout}
+            />
         </section>
       </div>
     </main>
