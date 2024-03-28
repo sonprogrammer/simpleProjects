@@ -50,7 +50,7 @@ export default function Contacts({
               >
                 <User
                   user={user}
-                  currenUserId={currentUser?.id}
+                  currentUserId={currentUser?.id}
                  />
               </div>
             )
