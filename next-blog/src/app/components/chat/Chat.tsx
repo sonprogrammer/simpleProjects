@@ -21,24 +21,29 @@ export default function Chat({
   setLayout
 }: ChatProps) {
 
-  if(!receiver.receiverName || !currentUser){
-    return <div className='h-full w-full'></div>
+
+  const messagesEndRef = useRef<null | HTMLDivElement>(null)
+
+  useEffect(()=>{
+    scrollToBottom()
+  })
+  
+  
+  const scrollToBottom = ()=>{
+    messagesEndRef?.current?.scrollIntoView()
+    behavior: 'smooth'
   }
 
   const conversation = currentUser?.conversations.find((conversation) =>
     conversation.users.find((user)=> user.id === receiver.receiverId)
   )
 
-  const messagesEndRef = useRef<null | HTMLDivElement>(null)
-  
-  const scrollToBottom = ()=>{
-    messagesEndRef?.current?.scrollIntoView()
-    behavior: 'smooth'
+
+  if(!receiver.receiverName || !currentUser){
+    return <div className='h-full w-full'></div>
   }
+
   
-  useEffect(()=>{
-    scrollToBottom()
-  })
   
   return (
     <div className='w-full'>
