@@ -6,11 +6,11 @@ import VideoPage from './pages/VideoPage'
 import NavigationBar from './components/NavigationBar'
 import SideBar from './components/SideBar'
 
-const Layout = () =>{
-  return(
+const Layout = () => {
+  return (
     <>
-        <NavigationBar />
-        <SideBar />
+      <NavigationBar />
+      <SideBar />
       <main>
         <Outlet />
       </main>
@@ -25,7 +25,7 @@ function App() {
     <div>
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route index element={<MainPage />}/>
+          <Route index element={<MainPage />} />
           <Route path='/results/:input' element={<SearchedVideoPage />} />
           <Route path='/video/:videoId' element={<VideoPage />} />
         </Route>
