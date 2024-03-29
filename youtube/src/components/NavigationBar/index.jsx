@@ -5,7 +5,7 @@ import RightNav from './RightNav'
 
 export default function NavigationBar() {
   return (
-    <nav>
+    <nav className='Navbar'>
       <LeftNav />
       <SearchBar />
       <RightNav />
