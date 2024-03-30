@@ -1,21 +1,20 @@
 @use '../../abstracts' as *;
 
-.menu-logo{
+.menu-logo {
     @include center;
 
-    .burgerMenu{
+    .burgerMenu {
         padding: .9rem;
-
     }
 
-    .logo-container{
+    .logo-container {
         padding: 1.5rem;
         @include center;
 
-        a{
+        a {
             @include center;
 
-            img{
+            img {
                 width: 9rem;
                 height: auto;
                 cursor: pointer;
@@ -23,3 +22,4 @@
         }
     }
 }
+
