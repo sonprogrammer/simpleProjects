@@ -4,13 +4,13 @@ import React from "react";
 export const SidebarContext = createContext()
 
 export const SidebarContextProvider = (props) =>{
-    const[isToggled, setIsToggeld] = useState(true)
+    const[isToggled, setIsToggled] = useState(true)
 
     const handleToggleSidebar= () =>{
-        setIsToggeld(!isToggled)
+        setIsToggled(!isToggled)
     }
     return <SidebarContext.Provider 
-        value={{isToggled, setIsToggeld, handleToggleSidebar}} 
+        value={{isToggled, setIsToggled, handleToggleSidebar}} 
         {...props}
     />
 }

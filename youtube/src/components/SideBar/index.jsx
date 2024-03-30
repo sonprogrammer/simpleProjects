@@ -21,7 +21,7 @@ export default function SideBar() {
         width < 792 
           ? null
           : (
-            isToggled < 1250 ?
+            isToggled ?
              <BigSideBar />
             :<SmallSideBar />
           )
