@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import useWindowSize from '../../helpers/useWindowSize'
 import SmallSideBar from './SmallSideBar'
 import BigSideBar from './BigSideBar'
+import { SidebarContext } from '../../context/SidebarContext'
 
 export default function SideBar() {
   const { width } = useWindowSize()
+  const { isToggled, setIsToggled } = useContext(SidebarContext)
+  
+  useEffect(()=>{
+    width <= 1300 
+    ? setIsToggled(false)
+    : setIsToggled(true)
+  },[])
+  
   
   return (
     <>
@@ -12,9 +21,9 @@ export default function SideBar() {
         width < 792 
           ? null
           : (
-            width < 1250 ?
-              <SmallSideBar />
-              : <BigSideBar />
+            isToggled < 1250 ?
+             <BigSideBar />
+            :<SmallSideBar />
           )
       } 
     </>
