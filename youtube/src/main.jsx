@@ -17,5 +17,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </SidebarContextProvider>
       </SearchContextProvider>
     </BrowserRouter>
-  </React.StrictMode>,
+  </React.StrictMode>
 )

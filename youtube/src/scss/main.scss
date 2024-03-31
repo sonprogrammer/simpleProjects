@@ -13,6 +13,7 @@
 
 :root{
     font-size: 62.5%;
+    
 }
 
 body{
@@ -37,15 +38,15 @@ body{
 
     #root {
         display: grid;
-        grid-template-columns: auto 1fr;
+        grid-template-columns: auto 1.4fr;
         grid-template-rows: 55px auto;
         grid-template-areas:
             "nav nav"
-            "aside aside";
+            "aside main";
 
-        main {
-            width: 100%;
-            grid-area: main;
+            main {
+                width: 100%;
+                grid-area: main;
+            }
         }
-    }
 }
