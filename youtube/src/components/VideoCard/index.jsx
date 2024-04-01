@@ -21,6 +21,7 @@ export default function VideoCard({
     const time = dayjs(info.publishedAt).fromNow(true)
     const views = formatViews(eInfo.viewCount)
     const duration = formatTimeVideo(eInfo.duration)
+    console.log('esInfo ', eInfo)
     
     return (
         <div className='videoCard'>
@@ -28,7 +29,7 @@ export default function VideoCard({
                 <div className='video_preview'>
                     <img src={img} alt="info.title" />
                     {
-                        eInfo.duration ?
+                        duration ?
                             <div className='video_duration'>
                                 <span>{duration}</span>
                             </div>
