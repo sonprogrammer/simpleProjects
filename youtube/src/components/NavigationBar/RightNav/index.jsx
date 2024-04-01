@@ -9,14 +9,14 @@ export default function RightNav() {
       <button className='icon-container'>
       <MdVideoCall size={25} data-tip='Creatㄹㅇㄹㅇe' data-for='navbar'/>
       </button>
-      <button>
-        <MdApps size={25}/>
+      <button className='icon-container'>
+        <MdApps size={25} />
       </button>
-      <button>
+      <button className='icon-container'>
         <MdNotifications size={25} />
       </button>
 
-      <Tooltip 
+      <Tooltip  
         id='navbar'
         backgroundColor='gray'
         effect='solid'

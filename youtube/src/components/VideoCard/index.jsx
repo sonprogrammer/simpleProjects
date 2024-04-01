@@ -51,9 +51,9 @@ export default function VideoCard({
                         </div>
                     </div>
                 </div>
-                </div>
                 <div className='dots_container'>
                         <BiDotsVerticalRounded size={25} className='dots'/>
+                </div>
                 </div>
             </Link>
         </div>

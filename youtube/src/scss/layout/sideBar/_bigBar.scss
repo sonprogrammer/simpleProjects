@@ -3,7 +3,7 @@
 .big_sidebar {
     width: 244px;
     padding-right: .5rem;
-    height: 100vh;
+    display: grid;
 
     .big_sidebar_container {
         width: 240px;

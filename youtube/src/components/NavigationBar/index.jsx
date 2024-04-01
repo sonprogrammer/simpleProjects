@@ -27,7 +27,7 @@ export default function NavigationBar() {
         </button>
       </form>
       <button className='icon-container voiceIcon'>
-        <MdKeyboardVoice size={25}/>
+        <MdKeyboardVoice size={25} />
       </button>
     </div>
   ) 

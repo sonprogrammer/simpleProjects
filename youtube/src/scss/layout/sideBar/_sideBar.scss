@@ -1,10 +1,9 @@
 @use '../../abstracts' as *;
 
-
 aside {
     grid-area: aside;
     height: calc(100vh - 55px);
-    padding: 5.5rem 0;
+    padding: .5rem 0;
     background-color: $bg-sidebar-color;
     color: white;
     font-weight: 400;

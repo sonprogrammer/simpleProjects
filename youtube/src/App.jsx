@@ -22,7 +22,7 @@ const Layout = () => {
 function App() {
 
   return (
-    <div>
+    <React.Fragment>
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<MainPage />} />
@@ -30,7 +30,7 @@ function App() {
           <Route path='/video/:videoId' element={<VideoPage />} />
         </Route>
       </Routes>
-    </div>
+    </React.Fragment>
   )
 }
 
