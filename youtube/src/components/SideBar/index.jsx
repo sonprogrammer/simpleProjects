@@ -9,7 +9,7 @@ export default function SideBar() {
   const { isToggled, setIsToggled } = useContext(SidebarContext)
   
   useEffect(()=>{
-    width <= 1300 
+    width <= 1320 
     ? setIsToggled(false)
     : setIsToggled(true)
   },[])
