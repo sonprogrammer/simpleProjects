@@ -6,6 +6,7 @@ export default function VideoPage() {
   const {videoId} = useParams()
   let location = useLocation()
   const { state: currentVideo} = location
+  
   const onPlayerReady = (e) =>{
     e.target.playVideo()
   }
