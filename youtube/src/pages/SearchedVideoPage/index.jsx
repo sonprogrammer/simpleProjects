@@ -35,7 +35,7 @@ export default function SearchedViedoPage() {
   ))
   
   return (
-    <section className=''>
+    <section className='searchedVideos'>
       {searchedVideosMarkup}
     </section>
   )
