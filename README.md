@@ -66,7 +66,7 @@
 1. Transform tools.(https://transform.tools/) To set up types easily
 
 
-## 3. Disney plus
+## 4. Disney plus
 
 <img width="700" alt="스크린샷 2024-03-15 21 50 37" src="https://github.com/sonprogrammer/simpleProjects/assets/97154156/614a417d-6461-41af-892c-78358eb29a4b">
 
@@ -88,4 +88,26 @@
 ### Trouble shooting🔫
 1. after installing firebase-tools with "~npm install -g firebase-tools~" command, "firebase login" command didn't work. so i resolved it by adding an automatic installation script (`curl -sL https://firebase.tools | bash`)
 
+
+## 4. Online flee market
+
+<img width="700" alt="스크린샷 2024-03-15 21 50 37" src="https://github.com/sonprogrammer/simpleProjects/assets/97154156/614a417d-6461-41af-892c-78358eb29a4b">
+
+### Stacks
+1. html
+2. css
+3. javascript
+4. React
+5. swiper
+6. tailwind
+
+### Deploy
+1. firebase : [링크](https://disney-b43d1.web.app/main)
+
+### Inspiration
+1. debounce function is delayed until a certain amount of times(anyway i should maek this function)
+2. using various functions like auth
+
+### Trouble shooting🔫
+1. after installing firebase-tools with "~npm install -g firebase-tools~" command, "firebase login" command didn't work. so i resolved it by adding an automatic installation script (`curl -sL https://firebase.tools | bash`)
 
