@@ -14,5 +14,3 @@ export const SidebarContextProvider = (props) =>{
         {...props}
     />
 }
-
-export default SidebarContextProvider;

@@ -2,7 +2,7 @@ import React from 'react'
 import { Outlet, Route, Routes } from 'react-router-dom'
 import MainPage from './pages/MainPage'
 import SearchedVideoPage from './pages/SearchedVideoPage'
-import VideoPage from './pages/VideoPage'
+import VideoPage from './pages/VideoPage/index'
 import NavigationBar from './components/NavigationBar'
 import SideBar from './components/SideBar'
 
