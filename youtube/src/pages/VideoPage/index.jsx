@@ -4,7 +4,6 @@ import YouTube from 'react-youtube'
 import { RiFlagLine, RiShareForwardLine } from 'react-icons/ri'
 import { BiLike, BiDislike } from 'react-icons/bi'
 import { MdPlaylistAdd } from 'react-icons/md'
-// import RelatedVideos from './RelatedVideos'
 import dayjs from 'dayjs';
 import {SidebarContext} from '../../context/SidebarContext'
 import axios from '../../api/axios';
@@ -12,6 +11,7 @@ import relativeTime from 'dayjs/plugin/relativeTime';
 import formatNumber from '../../helpers/formatNumber'
 import formatViews from '../../helpers/formatViews'
 import formatText from '../../helpers/formatText'
+import RelatedVideos from './RelatedVideos'
 
 dayjs.extend(relativeTime)
 
@@ -190,7 +190,7 @@ const VideoPage = () => {
           </div>
         </div>
         <div className="column column_2">
-          {/* <RelatedVideos currentVideo={videoId} /> */}
+          <RelatedVideos currentVideo={videoId} />
         </div>
       </div>
     </section>
