@@ -11,13 +11,21 @@ export default function SideBar() {
   useEffect(()=>{
     width <= 1320 
     ? setIsToggled(false)
+    : location.pathname.startsWith('/video')
+    ? setIsToggled(false)
     : setIsToggled(true)
-  },[])
+  },[width, location.pathname, setIsToggled])
   
   
   return (
     <>
-      {
+    {
+      location.pathname.startsWith('/video/')
+      ? (isToggled 
+          ? <BigSideBar />
+          : null
+          )
+      : 
         width < 792 
           ? null
           : (
