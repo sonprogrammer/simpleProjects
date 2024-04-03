@@ -15,11 +15,10 @@
    
 ### Font
 1. 눈누폰트(조선궁서체)
-   
+
 ### Deploy
 1. netlify : [링크](https://monumental-baklava-6ea958.netlify.app)
-
----       
+     
 
 ## 2. apple iPad responsive web page
 
@@ -96,11 +95,19 @@
 ### Stacks
 1. html
 2. css
-3. javascript
-4. React
-5. swiper
+3. typescript
+4. next
+5. SWR
 6. tailwind
+7. React Toastify
+8. React Loader Spinner
+9. Day.js
+10. KaKao API
+11. Next Cloudinary
+12. Prisma
+13. PostgreSQL
 
+<!--
 ### Deploy
 1. firebase : [링크](https://disney-b43d1.web.app/main)
 
@@ -111,3 +118,4 @@
 ### Trouble shooting🔫
 1. after installing firebase-tools with "~npm install -g firebase-tools~" command, "firebase login" command didn't work. so i resolved it by adding an automatic installation script (`curl -sL https://firebase.tools | bash`)
 
+-->
