@@ -6,6 +6,9 @@ import { BiDislike, BiLike } from 'react-icons/bi'
 import { RiFlagLine, RiShareForwardLine } from 'react-icons/ri'
 import { MdPlaylistAdd } from 'react-icons/md'
 import dayjs from 'dayjs'
+import formatNumber from '../../helpers/formatNumber'
+import formatViews from '../../helpers/formatViews'
+import formatText from '../../helpers/formatText'
 
 export default function VideoPage() {
   const { videoId } = useParams()
@@ -13,6 +16,14 @@ export default function VideoPage() {
   const { state: currentVideo } = location
 
   const { setIsToggled } = useContext(SidebarContext)
+
+  const views = formatNumber(currentVideo.extraInfo.viewCount)
+  const comments = formatNumber(currentVideo.extraInfo.commentCount)
+  const likes = formatViews(currentVideo.extraInfo.likesCount)
+  const dislikes = formatViews(currentVideo.extraInfo.dislikeCount)
+  const subscribers = formatViews(currentVideo.channelInfo.subscriberCount)
+
+  const videoDescription = formatText(currentVideo.snippet.description)
 
   useEffect(() => {
     setIsToggled(false)
@@ -41,9 +52,9 @@ export default function VideoPage() {
       <h1>{currentVideo.snippet.title}</h1>
       <div className='videoplayer_metadata'>
           <span>
-            {currentVideo.extraInfo.viewCount} views
+            {views} views
           </span>
-          <span className='dot_separator'> &8226;</span>
+          <span className='dot_separator'>&#8226;</span>
           <span>
             {dayjs(currentVideo.snippet.publishedAt).format('MMM D, YYYY')}
           </span>
@@ -67,13 +78,13 @@ export default function VideoPage() {
                 <div className='likes'>
                   <BiLike size={25}/>
                   <span>
-                    likes
+                    {likes}
                   </span>
                 </div>
                 <div className='dislikes'>
                   <BiDislike size={25}/>
                   <span>
-                    dislikes
+                    {dislikes}
                   </span>
                 </div>
               </div>
@@ -97,19 +108,19 @@ export default function VideoPage() {
               </div>
               <div className='channel_title'>
                 <a href="/">{currentVideo.channelInfo.title}</a>
-                <span>{currentVideo.channelInfo.subscriberCount} subscribers</span>
+                <span>{subscribers} subscribers</span>
               </div>
               <div className='channel_subscribe'>
                 <button> SUBSCRIBED</button>
               </div>
             </div>
             <div className='channel_descriptions'>
-              {currentVideo.snippet.description}              
+              {videoDescription}              
             </div>
           </div>
           <div className='video_comments_container'>
               <div className='video_commnets_count'>
-                {currentVideo.extraInfo.commentCount} Comments
+                {comments} Comments
               </div>
               <div className='video_comments'>
                 {/* videocomments */}
