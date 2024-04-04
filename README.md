@@ -15,11 +15,10 @@
    
 ### Font
 1. 눈누폰트(조선궁서체)
-   
+
 ### Deploy
 1. netlify : [링크](https://monumental-baklava-6ea958.netlify.app)
-
----       
+     
 
 ## 2. apple iPad responsive web page
 
@@ -66,7 +65,7 @@
 1. Transform tools.(https://transform.tools/) To set up types easily
 
 
-## 3. Disney plus
+## 4. Disney plus
 
 <img width="700" alt="스크린샷 2024-03-15 21 50 37" src="https://github.com/sonprogrammer/simpleProjects/assets/97154156/614a417d-6461-41af-892c-78358eb29a4b">
 
@@ -89,3 +88,34 @@
 1. after installing firebase-tools with "~npm install -g firebase-tools~" command, "firebase login" command didn't work. so i resolved it by adding an automatic installation script (`curl -sL https://firebase.tools | bash`)
 
 
+## 4. Online flee market
+
+<img width="700" alt="스크린샷 2024-03-15 21 50 37" src="https://github.com/sonprogrammer/simpleProjects/assets/97154156/614a417d-6461-41af-892c-78358eb29a4b">
+
+### Stacks
+1. html
+2. css
+3. typescript
+4. next
+5. SWR
+6. tailwind
+7. React Toastify
+8. React Loader Spinner
+9. Day.js
+10. KaKao API
+11. Next Cloudinary
+12. Prisma
+13. PostgreSQL
+
+<!--
+### Deploy
+1. firebase : [링크](https://disney-b43d1.web.app/main)
+
+### Inspiration
+1. debounce function is delayed until a certain amount of times(anyway i should maek this function)
+2. using various functions like auth
+
+### Trouble shooting🔫
+1. after installing firebase-tools with "~npm install -g firebase-tools~" command, "firebase login" command didn't work. so i resolved it by adding an automatic installation script (`curl -sL https://firebase.tools | bash`)
+
+-->
