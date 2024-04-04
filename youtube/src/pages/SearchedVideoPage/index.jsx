@@ -6,6 +6,7 @@ import { SidebarContext } from '../../context/SidebarContext'
 
 
 export default function SearchedViedoPage() {
+  
 
   const [searchedVideos, setSearchedVideos] = useState([])
   const { searchQuery } = useContext(SearchContext)
